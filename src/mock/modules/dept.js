@@ -5,7 +5,7 @@
 // 保存
 export function save() {
   return {
-    url: 'dept/save',
+    url: 'sys_dept/save',
     type: 'post',
     data: {
       "code": 200,
@@ -17,7 +17,7 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'dept/delete',
+    url: 'sys_dept/delete',
     type: 'post',
     data: {
       "code": 200,
@@ -237,7 +237,7 @@ export function findDeptTree(params) {
     ]
   }
   return {
-    url: 'dept/findTree',
+    url: 'sys_dept/findTree',
     type: 'get',
     data: findTreeData
   }

@@ -14,16 +14,15 @@ import * as loginlog from './modules/loginlog'
 // 2. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
 // 3. 开启/关闭[业务模块中某个请求]拦截, 通过函数返回对象中的[isOpen属性]设置.
 let openMock = true
-let closeMock = false
-fnCreate(user, closeMock)
-fnCreate(log, closeMock)
-fnCreate(loginlog, closeMock)
-fnCreate(login, closeMock)
-fnCreate(config, closeMock)
-fnCreate(dict, closeMock)
-fnCreate(dept, closeMock)
-fnCreate(menu, closeMock)
-fnCreate(role, closeMock)
+fnCreate(user, openMock)
+fnCreate(log, openMock)
+fnCreate(loginlog, openMock)
+fnCreate(login, openMock)
+fnCreate(config, openMock)
+fnCreate(dict, openMock)
+fnCreate(dept, openMock)
+fnCreate(menu, openMock)
+fnCreate(role, openMock)
 
 
 

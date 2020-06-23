@@ -375,7 +375,7 @@ export function findNavTree() {
     ]
   }
   return {
-    url: 'menu/findNavTree',
+    url: 'sys_menu/findNavTree',
     type: 'get',
     data: navTreeData
   }
@@ -1418,7 +1418,7 @@ export function findMenuTree() {
     ]
   }
   return {
-    url: 'menu/findMenuTree',
+    url: 'sys_menu/findMenuTree',
     type: 'get',
     data: menuTreeData
   }

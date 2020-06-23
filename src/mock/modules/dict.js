@@ -1,11 +1,11 @@
-/* 
+/*
  * 字典管理模块
  */
 
 // 保存
 export function save() {
   return {
-    url: 'dict/save',
+    url: 'sys_dict/save',
     type: 'post',
     data: {
       "code": 200,
@@ -17,7 +17,7 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'dict/delete',
+    url: 'sys_dict/delete',
     type: 'post',
     data: {
       "code": 200,
@@ -69,7 +69,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'dict/findPage',
+    url: 'sys_dict/findByPage',
     type: 'post',
     data: findPageData
   }
