@@ -5,7 +5,7 @@
 // 保存
 export function save() {
   return {
-    url: 'role/save',
+    url: 'sys_role/save',
     type: 'post',
     data: {
       "code": 200,
@@ -17,7 +17,7 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'role/delete',
+    url: 'sys_role/delete',
     type: 'post',
     data: {
       "code": 200,
@@ -65,7 +65,7 @@ export function findAll() {
     ]
   }
   return {
-    url: 'role/findAll',
+    url: 'sys_role/findAll',
     type: 'get',
     data: findAllData
   }
@@ -125,7 +125,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'role/findPage',
+    url: 'sys_role/findByPage',
     type: 'post',
     data: findPageData
   }
@@ -1147,7 +1147,7 @@ export function findRoleMenus(params) {
     ]
   }
   return {
-    url: 'role/findRoleMenus',
+    url: 'sys_role/findRoleMenus',
     type: 'get',
     data: findRoleMenuData
   }

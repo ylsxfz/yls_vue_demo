@@ -5,7 +5,7 @@
 // 保存
 export function save() {
   return {
-    url: 'config/save',
+    url: 'sys_config/save',
     type: 'post',
     data: {
       "code": 200,
@@ -17,7 +17,7 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'config/delete',
+    url: 'sys_config/delete',
     type: 'post',
     data: {
       "code": 200,
@@ -55,7 +55,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'config/findPage',
+    url: 'sys_config/findByPage',
     type: 'post',
     data: findPageData
   }

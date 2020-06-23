@@ -1,4 +1,4 @@
-/* 
+/*
  * 登录日志模块
  */
 
@@ -107,7 +107,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'loginlog/findPage',
+    url: 'sys_login_log/findByPage',
     type: 'post',
     data: findPageData
   }
