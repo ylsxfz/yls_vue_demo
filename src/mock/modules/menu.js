@@ -26,7 +26,7 @@ export function findNavTree() {
           "level": 0,
           "children": []
       },{
-          "id": 50,
+          "id": 51,
           "createBy": "admin",
           "createTime": "2018-11-15T06:39:30.000+0000",
           "lastUpdateBy": "admin",
@@ -34,6 +34,23 @@ export function findNavTree() {
           "parentId": 0,
           "name": "系统首页",
           "url": "/ylsBusiness/index",
+          "perms": "",
+          "type": 1,
+          "icon": "el-icon-view",
+          "orderNum": 5,
+          "delFlag": 0,
+          "parentName": null,
+          "level": 0,
+          "children": []
+      },{
+          "id": 52,
+          "createBy": "admin",
+          "createTime": "2018-11-15T06:39:30.000+0000",
+          "lastUpdateBy": "admin",
+          "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+          "parentId": 0,
+          "name": "任务管理",
+          "url": "/ylsBusiness/taskManagement",
           "perms": "",
           "type": 1,
           "icon": "el-icon-view",
