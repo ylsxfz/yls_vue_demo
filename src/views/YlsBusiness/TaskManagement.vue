@@ -54,6 +54,8 @@
   import {
     format
   } from "@/utils/datetime"
+  
+  //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
      * 注册组件
