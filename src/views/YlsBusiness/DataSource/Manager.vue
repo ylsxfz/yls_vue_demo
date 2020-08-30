@@ -1,10 +1,11 @@
 <template>
   <div class="page-container">
+    <!-- 数据源管理页面 -->
     <!-- 搜索框 -->
     <div class="toolbar" style="float: left;padding-top: 0.625rem;padding-left: 0.9375rem;">
       <el-form :inline="true" :model="filters" :size="size">
         <el-form-item>
-          <el-input v-model="filters.name" placeholder="用户名"></el-input>
+          <el-input v-model="filters.name" placeholder="连接名称"></el-input>
         </el-form-item>
         <el-form-item>
           <kt-button icon="fa fa-search" :label="$t('action.search')" perms="sys:role:view" type="primary" @click="findByPage(null)" />
@@ -14,7 +15,6 @@
         </el-form-item>
       </el-form>
     </div>
-
     <!-- 工具栏 -->
     <div class="toolbar" style="float: right;padding-top: 0.625rem;padding-right: 0.9375rem;">
       <el-form>
@@ -36,8 +36,8 @@
       <table-column-filter-dialog ref="tableColumnFilterDialog" :columns="columns" @handleFilterColumns="handleFilterColumns">
       </table-column-filter-dialog>
     </div>
-    
-    
+
+
     <!--表格内容栏-->
     <kt-table permsEdit="sys:user:edit" permsDelete="sys:user:delete" :data="pageResult" :columns="filterColumns"
       @findPage="findByPage" @handleEdit="handleEdit" @handleDelete="handleDelete">
@@ -56,7 +56,6 @@
   import {
     format
   } from "@/utils/datetime"
-  
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -68,9 +67,20 @@
       KtButton,
       TableColumnFilterDialog
     },
+    /**
+     * 名称
+     */
+    name: 'empty_page',
 
     /**
-     * data() 为变量赋值等
+     * 注册属性
+     */
+    props: {
+
+    },
+
+    /**
+     *  data() 为变量赋值等
      */
     data() {
       return {
@@ -82,15 +92,17 @@
         filterColumns: [],
         pageRequest: {
           pageNum: 1,
-          pageSize: 8
+          pageSize: 1
         },
-        pageResult: {},
+        pageResult: {
+
+        },
 
       }
     },
 
     /**
-     * 定义方法
+     * 注册方法函数
      */
     methods: {
       //分页查询数据
@@ -102,19 +114,11 @@
           name: 'name',
           value: this.filters.name
         }]
-        this.$api.user.findPage(this.pageRequest).then((res) => {
+        this.$api.datasource_manage.findPage(this.pageRequest).then((res) => {
           this.pageResult = res.data
-          this.findUserRoles()
         }).then(data != null ? data.callback : '')
       },
 
-      // 加载用户角色信息
-      findUserRoles: function() {
-        this.$api.role.findAll().then((res) => {
-          // 加载角色集合
-          this.roles = res.data
-        })
-      },
       //显示新增页面
       handleAdd: function() {
         return {}
@@ -154,46 +158,57 @@
           },
           {
             prop: "name",
-            label: "用户名",
+            label: "连接名称",
             minWidth: 120
           },
           {
-            prop: "nickName",
-            label: "昵称",
+            prop: "ip",
+            label: "地址",
             minWidth: 120
-          },
-          {
-            prop: "deptName",
-            label: "机构",
-            minWidth: 120
-          },
-          {
-            prop: "roleNames",
-            label: "角色",
-            minWidth: 100
-          },
-          {
-            prop: "email",
-            label: "邮箱",
-            minWidth: 120
-          },
-          {
-            prop: "mobile",
-            label: "手机",
-            minWidth: 100
           },
           {
             prop: "status",
             label: "状态",
-            minWidth: 70
+            minWidth: 120
           },
-          // {prop:"createBy", label:"创建人", minWidth:120},
-          // {prop:"createTime", label:"创建时间", minWidth:120, formatter:this.dateFormat}
-          // {prop:"lastUpdateBy", label:"更新人", minWidth:100},
-          // {prop:"lastUpdateTime", label:"更新时间", minWidth:120, formatter:this.dateFormat}
+          {
+            prop: "heartbeatTime",
+            label: "最近心跳时间",
+            minWidth: 100
+          },
+          {
+            prop: "createTime",
+            label: "创建时间",
+            minWidth: 120,
+            // formatter: this.dateFormat
+          },
+          {
+            prop: "createUser",
+            label: "创建人",
+            minWidth: 120,
+          },
+          {
+            prop: "lastUpdateUser",
+            label: "更新人",
+            minWidth: 100
+          },
+          {
+            prop: "lastUpdateTime",
+            label: "更新时间",
+            minWidth: 120,
+            // formatter: this.dateFormat
+          }
         ]
         this.filterColumns = JSON.parse(JSON.stringify(this.columns));
       }
+
+    },
+
+
+    /**
+     * created 在模板渲染成html前调用，即通常初始化某些属性值，然后再渲染成视图
+     */
+    created() {
 
     },
 
@@ -201,11 +216,11 @@
      * mounted在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作
      */
     mounted() {
-      this.initColumns()
-    }
-
+      this.initColumns();
+    },
   }
 </script>
 
 <style scoped>
+
 </style>
