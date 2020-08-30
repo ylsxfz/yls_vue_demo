@@ -36,6 +36,8 @@
       <table-column-filter-dialog ref="tableColumnFilterDialog" :columns="columns" @handleFilterColumns="handleFilterColumns">
       </table-column-filter-dialog>
     </div>
+    
+    
     <!--表格内容栏-->
     <kt-table permsEdit="sys:user:edit" permsDelete="sys:user:delete" :data="pageResult" :columns="filterColumns"
       @findPage="findByPage" @handleEdit="handleEdit" @handleDelete="handleDelete">

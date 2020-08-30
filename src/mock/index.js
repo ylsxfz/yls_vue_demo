@@ -9,6 +9,7 @@ import * as dict from './modules/dict'
 import * as config from './modules/config'
 import * as log from './modules/log'
 import * as loginlog from './modules/loginlog'
+import * as datasource_manage from './modules/dataSourceManage'
 
 // 1. 开启/关闭[所有模块]拦截, 通过调[openMock参数]设置.
 // 2. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
@@ -23,6 +24,7 @@ fnCreate(dict, openMock)
 fnCreate(dept, openMock)
 fnCreate(menu, openMock)
 fnCreate(role, openMock)
+fnCreate(datasource_manage,openMock)
 
 
 
