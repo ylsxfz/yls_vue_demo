@@ -43,7 +43,31 @@
       @findPage="findByPage" @handleEdit="handleEdit" @handleDelete="handleDelete">
     </kt-table>
 
-
+    <!-- 新增编辑界面 -->
+    <el-dialog :title="operation?'新增':'编辑'" width="40%" :visible.sync="dialogVisible" :close-on-click-modal="false">
+      <el-form :model="dataForm" label-width="80px" :rules="dataFormRules" ref="dataForm" :size="size" label-position="right">
+        <el-form-item label="ID" prop="id" v-if="false">
+          <el-input v-model="dataForm.id" :disabled="true" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="连接名称" prop="name">
+          <el-input v-model="dataForm.name" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="主机" prop="ip">
+          <el-input v-model="dataForm.ip" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="dataForm.username" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="密码" prop="password">
+          <el-input v-model="dataForm.password" auto-complete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <!-- 按钮区域 -->
+      <div slot="footer" class="dialog-footer">
+        <el-button :size="size" @click.native="dialogVisible = false">{{$t('action.cancel')}}</el-button>
+        <el-button :size="size" type="primary" @click.native="submitForm" :loading="editLoading">{{$t('action.submit')}}</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -85,17 +109,40 @@
     data() {
       return {
         size: 'small',
+        //过滤字段
         filters: {
           name: ''
         },
+        //列显示相关
         columns: [],
         filterColumns: [],
+        //分页请求
         pageRequest: {
           pageNum: 1,
           pageSize: 1
         },
+        //分页结果
         pageResult: {
 
+        },
+        dataFormRules: {
+          name: [{
+            required: true,
+            message: '请输入连接名称',
+            trigger: 'blur'
+          }]
+        },
+        //新增编辑相关
+        operation: false, // true:新增, false:编辑
+        dialogVisible: false, // 新增编辑界面是否显示
+        editLoading: false,
+        // 新增编辑界面数据
+        dataForm: {
+          id: 0,
+          name: '',
+          ip: '192.168.0.1',
+          username: 'yls',
+          password: '123456'
         },
 
       }
@@ -119,18 +166,42 @@
         }).then(data != null ? data.callback : '')
       },
 
+      //表单提交
+      submitForm: function() {
+        this.$api.datasource_manage.submitTest(this,() => {
+          this.editLoading = true
+          let params = Object.assign({}, this.dataForm)
+          console.log(params)
+          this.$api.datasource_manage.save(params).then((res) => {
+            this.$api.datasource_manage.test(this, res)
+          })
+        })
+      },
+
+
       //显示新增页面
       handleAdd: function() {
-        return {}
+        this.dialogVisible = true
+        this.operation = true
+        this.dataForm = {
+          id: 0,
+          name: 'hive',
+          ip: '192.168.0.1',
+          username: 'yls',
+          password: '123456',
+        }
       },
 
       //删除
-      handleDelete: function() {
-        return {}
+      handleDelete: function(data) {
+        this.$api.datasource_manage.batchDelete(data.params).then(data != null ? data.callback : '')
       },
 
-      handleEdit: function() {
-        return {}
+      //显示编辑
+      handleEdit: function(params) {
+        this.dialogVisible = true
+        this.operation = false
+        this.dataForm = Object.assign({}, params.row)
       },
 
       //列显示
@@ -149,6 +220,7 @@
         return {}
       },
 
+
       // 处理表格列过滤显示
       initColumns: function() {
         this.columns = [{
@@ -163,7 +235,22 @@
           },
           {
             prop: "ip",
-            label: "地址",
+            label: "主机",
+            minWidth: 120
+          },
+          {
+            prop: "username",
+            label: "用户名",
+            minWidth: 120,
+          },
+          {
+            prop: "password",
+            label: "密码",
+            minWidth: 120,
+          },
+          {
+            prop: "connType",
+            label: "连接类型",
             minWidth: 120
           },
           {

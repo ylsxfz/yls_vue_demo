@@ -14,6 +14,9 @@ export function findPage(params) {
       "content": [{
         "id": "001",
         "name": "hive",
+        "connType": "hive",
+        "username": 'yls',
+        "password": '123456',
         "ip": "192.168.0.1",
         "status": "onLine",
         "heartbeatTime": "2020-08-30 16:00:00",
@@ -31,4 +34,31 @@ export function findPage(params) {
     data: findByPageData
   }
 
+}
+
+//批量删除
+export function batchDelete() {
+  return {
+    url: 'datasource_manage/delete',
+    type: 'post',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}
+
+
+//保存
+export function save(){
+  return{
+    url:'datasource_manage/save',
+    type: 'post',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
 }

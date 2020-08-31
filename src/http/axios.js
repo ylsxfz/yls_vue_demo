@@ -35,7 +35,7 @@ export default function $axios(options) {
         const errorInfo = error.response
         console.log(errorInfo)
         if (errorInfo) {
-          error = errorInfo.data  // 页面那边catch的时候就能拿到详细的错误信息,看最下边的Promise.reject
+          error = errorInfo.data // 页面那边catch的时候就能拿到详细的错误信息,看最下边的Promise.reject
           const errorStatus = errorInfo.status; // 404 403 500 ...
           router.push({
             path: `/error/${errorStatus}`
@@ -44,10 +44,11 @@ export default function $axios(options) {
         return Promise.reject(error) // 在调用的那边可以拿到(catch)你想返回的错误信息
       }
     )
-    
+
     // response 响应拦截器
     instance.interceptors.response.use(
       response => {
+        console.log(response)
         return response.data
       },
       err => {
@@ -93,6 +94,7 @@ export default function $axios(options) {
         return Promise.reject(err) // 返回接口返回的错误信息
       }
     )
+    
     // 请求处理
     instance(options).then(res => {
       resolve(res)
