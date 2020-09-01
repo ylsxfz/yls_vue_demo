@@ -64,17 +64,34 @@ export function findNavTree() {
           "lastUpdateBy": "admin",
           "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
           "parentId": 0,
-          "name": "echart",
+          "name": "Echart",
           "url": "/ylsBusiness/echartIndex",
           "perms": "",
           "type": 1,
-          "icon": "el-icon-coin",
+          "icon": "el-icon-pie-chart",
           "orderNum": 5,
           "delFlag": 0,
           "parentName": null,
           "level": 0,
           "children": []
-        }, ]
+        }, {
+          "id": 1005,
+          "createBy": "admin",
+          "createTime": "2018-11-15T06:39:30.000+0000",
+          "lastUpdateBy": "admin",
+          "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+          "parentId": 0,
+          "name": "GoJs",
+          "url": "/ylsBusiness/goJsIndex",
+          "perms": "",
+          "type": 1,
+          "icon": "el-icon-s-data",
+          "orderNum": 5,
+          "delFlag": 0,
+          "parentName": null,
+          "level": 0,
+          "children": []
+        } ]
       },
       // {
       //     "id": 100,

@@ -241,7 +241,7 @@
           {
             prop: "ip",
             label: "主机",
-            minWidth: 120
+            minWidth: 80
           },
           {
             prop: "username",
@@ -256,12 +256,12 @@
           {
             prop: "connType",
             label: "连接类型",
-            minWidth: 120
+            minWidth: 80
           },
           {
             prop: "status",
             label: "状态",
-            minWidth: 120
+            minWidth: 60
           },
           {
             prop: "heartbeatTime",
@@ -277,12 +277,12 @@
           {
             prop: "createUser",
             label: "创建人",
-            minWidth: 120,
+            minWidth: 80,
           },
           {
             prop: "lastUpdateUser",
             label: "更新人",
-            minWidth: 100
+            minWidth: 80
           },
           {
             prop: "lastUpdateTime",
