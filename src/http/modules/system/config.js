@@ -1,6 +1,6 @@
-import axios from '../axios'
+import axios from '../../axios'
 
-/* 
+/*
  * 系统配置模块
  */
 

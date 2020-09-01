@@ -1,16 +1,18 @@
 /*
  * 接口统一集成模块
  */
-import * as login from './modules/login'
-import * as user from './modules/user'
-import * as dept from './modules/dept'
-import * as role from './modules/role'
-import * as menu from './modules/menu'
-import * as dict from './modules/dict'
-import * as config from './modules/config'
-import * as log from './modules/log'
-import * as loginlog from './modules/loginlog'
+import * as login from './modules/system/login'
+import * as user from './modules/system/user'
+import * as dept from './modules/system/dept'
+import * as role from './modules/system/role'
+import * as menu from './modules/system/menu'
+import * as dict from './modules/system/dict'
+import * as config from './modules/system/config'
+import * as log from './modules/system/log'
+import * as loginlog from './modules/system/loginlog'
 import * as datasource_manage from './modules/dataSourceManage'
+import * as request_utils from './modules/common/requestUtils'
+import * as response_utils from './modules/common/responseUtils'
 
 
 // 默认全部导出
@@ -24,5 +26,7 @@ export default {
     config,
     log,
     loginlog,
-    datasource_manage
+    datasource_manage,
+    request_utils,
+    response_utils
 }

@@ -1,4 +1,4 @@
-import axios from '../axios'
+import axios from '../../axios'
 
 /*
  * 字典管理模块

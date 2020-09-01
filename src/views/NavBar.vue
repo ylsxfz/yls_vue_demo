@@ -6,7 +6,7 @@
         <img v-if="collapse" src="@/assets/logo.png"/> <div>{{collapse?'':appName}}</div>
     </div>
     <!-- 导航菜单 -->
-    <el-menu ref="navmenu" default-active="1" :class="collapse?'menu-bar-collapse-width':'menu-bar-width'"
+    <el-menu ref="navmenu" text-color="#fff" active-text-color="#fff" default-active="1" :class="collapse?'menu-bar-collapse-width':'menu-bar-width'"
       :collapse="collapse" :collapse-transition="false" :unique-opened="true  "
       @open="handleopen" @close="handleclose" @select="handleselect">
       <!-- 导航菜单树组件，动态加载菜单 -->
@@ -89,12 +89,13 @@ export default {
     top: 60px;
     bottom: 0px;
     text-align: left;
-    // background-color: #2968a30c;
+    //左侧导航栏的背景色
+    background-color: #373e48;
   }
   .logo {
     position:absolute;
     top: 0px;
-    height: 60px;   
+    height: 60px;
     line-height: 60px;
     background: #545c64;
     cursor:pointer;
@@ -120,4 +121,21 @@ export default {
   }
 }
 
+</style>
+
+<style lang="scss">
+//设置了默认左边框为白色
+  .el-submenu .el-submenu__title{
+      //border-left: #fff solid 6px;
+  }
+  //设置鼠标悬停时el-submenu的样式
+  .el-submenu .el-submenu__title:hover{
+     //border-left: #3F393B solid 6px !important;
+     background-color: #EBB40E !important;
+     color: #FFFFFF !important;
+     //less语法，实现鼠标悬停时icon变色
+     i {
+       color: #FFFFFF;
+     }
+  }
 </style>

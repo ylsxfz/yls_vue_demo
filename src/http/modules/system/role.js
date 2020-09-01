@@ -1,4 +1,4 @@
-import axios from '../axios'
+import axios from '../../axios'
 
 /*
  * 角色管理模块

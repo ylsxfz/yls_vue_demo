@@ -157,6 +157,7 @@
         if (data !== null) {
           this.pageRequest = data.pageRequest
         }
+        //封装请求参数
         this.pageRequest.params = [{
           name: 'name',
           value: this.filters.name
@@ -168,12 +169,16 @@
 
       //表单提交
       submitForm: function() {
-        this.$api.datasource_manage.submitTest(this,() => {
+        //调用统一封装的请求
+        this.$api.request_utils.submitCom(this,() => {
           this.editLoading = true
+          //封装请求参数
           let params = Object.assign({}, this.dataForm)
           console.log(params)
+          //提交请求
           this.$api.datasource_manage.save(params).then((res) => {
-            this.$api.datasource_manage.test(this, res)
+            //调用统一封装的响应解析
+            this.$api.response_utils.getFormResponse(this, res)
           })
         })
       },
@@ -231,7 +236,7 @@
           {
             prop: "name",
             label: "连接名称",
-            minWidth: 120
+            minWidth: 80
           },
           {
             prop: "ip",
@@ -241,12 +246,12 @@
           {
             prop: "username",
             label: "用户名",
-            minWidth: 120,
+            minWidth: 80,
           },
           {
             prop: "password",
             label: "密码",
-            minWidth: 120,
+            minWidth: 80,
           },
           {
             prop: "connType",
@@ -260,8 +265,8 @@
           },
           {
             prop: "heartbeatTime",
-            label: "最近心跳时间",
-            minWidth: 100
+            label: "心跳时间",
+            minWidth: 120
           },
           {
             prop: "createTime",
