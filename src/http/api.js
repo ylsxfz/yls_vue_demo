@@ -10,9 +10,11 @@ import * as dict from './modules/system/dict'
 import * as config from './modules/system/config'
 import * as log from './modules/system/log'
 import * as loginlog from './modules/system/loginlog'
+//yls
 import * as datasource_manage from './modules/dataSourceManage'
 import * as request_utils from './modules/common/requestUtils'
 import * as response_utils from './modules/common/responseUtils'
+import * as echart_map from './modules/echarts/echartMap'
 
 
 // 默认全部导出
@@ -28,5 +30,6 @@ export default {
     loginlog,
     datasource_manage,
     request_utils,
-    response_utils
+    response_utils,
+    echart_map
 }
