@@ -7,43 +7,41 @@ export function findNavTree() {
   const navTreeData = {
     "code": 200,
     "msg": null,
-    "data": [
-      {
-          "id": 101,
-          "createBy": "admin",
-          "createTime": "2018-11-15T06:39:30.000+0000",
-          "lastUpdateBy": "admin",
-          "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
-          "parentId": 0,
-          "name": "系统首页",
-          "url": "/ylsBusiness/index",
-          "perms": "",
-          "type": 1,
-          "icon": "el-icon-s-home",
-          "orderNum": 5,
-          "delFlag": 0,
-          "parentName": null,
-          "level": 0,
-          "children": []
-      },{
-          "id": 102,
-          "createBy": "admin",
-          "createTime": "2018-11-15T06:39:30.000+0000",
-          "lastUpdateBy": "admin",
-          "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
-          "parentId": 0,
-          "name": "模板页面",
-          "url": "/ylsBusiness/taskManagement",
-          "perms": "",
-          "type": 1,
-          "icon": "el-icon-menu",
-          "orderNum": 5,
-          "delFlag": 0,
-          "parentName": null,
-          "level": 0,
-          "children": []
-      },{
-          "id": 103,
+    "data": [{
+        "id": 101,
+        "createBy": "admin",
+        "createTime": "2018-11-15T06:39:30.000+0000",
+        "lastUpdateBy": "admin",
+        "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+        "parentId": 0,
+        "name": "系统首页",
+        "url": "/ylsBusiness/index",
+        "perms": "",
+        "type": 1,
+        "icon": "el-icon-s-home",
+        "orderNum": 5,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "children": []
+      }, {
+        "id": 102,
+        "createBy": "admin",
+        "createTime": "2018-11-15T06:39:30.000+0000",
+        "lastUpdateBy": "admin",
+        "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+        "parentId": 0,
+        "name": "模板页面",
+        "url": "/ylsBusiness/taskManagement",
+        "perms": "",
+        "type": 1,
+        "icon": "el-icon-menu",
+        "orderNum": 5,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "children": [{
+          "id": 1003,
           "createBy": "admin",
           "createTime": "2018-11-15T06:39:30.000+0000",
           "lastUpdateBy": "admin",
@@ -59,25 +57,43 @@ export function findNavTree() {
           "parentName": null,
           "level": 0,
           "children": []
+        }, {
+          "id": 1004,
+          "createBy": "admin",
+          "createTime": "2018-11-15T06:39:30.000+0000",
+          "lastUpdateBy": "admin",
+          "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+          "parentId": 0,
+          "name": "echart",
+          "url": "/ylsBusiness/echartIndex",
+          "perms": "",
+          "type": 1,
+          "icon": "el-icon-coin",
+          "orderNum": 5,
+          "delFlag": 0,
+          "parentName": null,
+          "level": 0,
+          "children": []
+        }, ]
       },
-	  // {
-	  //     "id": 100,
-	  //     "createBy": "admin",
-	  //     "createTime": "2018-11-15T06:39:30.000+0000",
-	  //     "lastUpdateBy": "admin",
-	  //     "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
-	  //     "parentId": 0,
-	  //     "name": "空白页面",
-	  //     "url": "/ylsEmpty/empty",
-	  //     "perms": "",
-	  //     "type": 1,
-	  //     "icon": "el-icon-folder",
-	  //     "orderNum": 5,
-	  //     "delFlag": 0,
-	  //     "parentName": null,
-	  //     "level": 0,
-	  //     "children": []
-	  // },
+      // {
+      //     "id": 100,
+      //     "createBy": "admin",
+      //     "createTime": "2018-11-15T06:39:30.000+0000",
+      //     "lastUpdateBy": "admin",
+      //     "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+      //     "parentId": 0,
+      //     "name": "空白页面",
+      //     "url": "/ylsEmpty/empty",
+      //     "perms": "",
+      //     "type": 1,
+      //     "icon": "el-icon-folder",
+      //     "orderNum": 5,
+      //     "delFlag": 0,
+      //     "parentName": null,
+      //     "level": 0,
+      //     "children": []
+      // },
       {
         "id": 1,
         "createBy": null,
@@ -94,8 +110,7 @@ export function findNavTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
+        "children": [{
             "id": 2,
             "createBy": null,
             "createTime": null,
@@ -459,8 +474,7 @@ export function findMenuTree() {
   const menuTreeData = {
     "code": 200,
     "msg": null,
-    "data": [
-      {
+    "data": [{
         "id": 1,
         "createBy": null,
         "createTime": null,
@@ -476,8 +490,7 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
+        "children": [{
             "id": 2,
             "createBy": null,
             "createTime": null,
@@ -493,8 +506,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 3,
                 "createBy": null,
                 "createTime": null,
@@ -584,8 +596,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 8,
                 "createBy": null,
                 "createTime": null,
@@ -675,8 +686,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 13,
                 "createBy": null,
                 "createTime": null,
@@ -766,8 +776,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 18,
                 "createBy": null,
                 "createTime": null,
@@ -857,8 +866,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 23,
                 "createBy": null,
                 "createTime": null,
@@ -948,8 +956,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 28,
                 "createBy": null,
                 "createTime": null,
@@ -1039,8 +1046,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 33,
                 "createBy": null,
                 "createTime": null,
@@ -1094,8 +1100,7 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统管理",
             "level": 1,
-            "children": [
-              {
+            "children": [{
                 "id": 36,
                 "createBy": null,
                 "createTime": null,
@@ -1151,45 +1156,41 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
-            "id": 44,
-            "createBy": "admin",
-            "createTime": "2018-11-03T03:06:48.000+0000",
-            "lastUpdateBy": "admin",
-            "lastUpdateTime": "2018-12-27T03:08:11.000+0000",
-            "parentId": 43,
-            "name": "注册中心",
-            "url": "http://127.0.0.1:8500",
-            "perms": null,
-            "type": 1,
-            "icon": " el-icon-view",
+        "children": [{
+          "id": 44,
+          "createBy": "admin",
+          "createTime": "2018-11-03T03:06:48.000+0000",
+          "lastUpdateBy": "admin",
+          "lastUpdateTime": "2018-12-27T03:08:11.000+0000",
+          "parentId": 43,
+          "name": "注册中心",
+          "url": "http://127.0.0.1:8500",
+          "perms": null,
+          "type": 1,
+          "icon": " el-icon-view",
+          "orderNum": 0,
+          "delFlag": 0,
+          "parentName": "服务治理",
+          "level": 1,
+          "children": [{
+            "id": 45,
+            "createBy": null,
+            "createTime": null,
+            "lastUpdateBy": null,
+            "lastUpdateTime": null,
+            "parentId": 44,
+            "name": "查看",
+            "url": null,
+            "perms": "sys:consul:view",
+            "type": 2,
+            "icon": null,
             "orderNum": 0,
             "delFlag": 0,
-            "parentName": "服务治理",
-            "level": 1,
-            "children": [
-              {
-                "id": 45,
-                "createBy": null,
-                "createTime": null,
-                "lastUpdateBy": null,
-                "lastUpdateTime": null,
-                "parentId": 44,
-                "name": "查看",
-                "url": null,
-                "perms": "sys:consul:view",
-                "type": 2,
-                "icon": null,
-                "orderNum": 0,
-                "delFlag": 0,
-                "parentName": "注册中心",
-                "level": 2,
-                "children": []
-              }
-            ]
-          }
-        ]
+            "parentName": "注册中心",
+            "level": 2,
+            "children": []
+          }]
+        }]
       },
       {
         "id": 46,
@@ -1207,26 +1208,24 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
-            "id": 47,
-            "createBy": null,
-            "createTime": null,
-            "lastUpdateBy": null,
-            "lastUpdateTime": null,
-            "parentId": 46,
-            "name": "查看",
-            "url": null,
-            "perms": "sys:swagger:view",
-            "type": 2,
-            "icon": null,
-            "orderNum": 0,
-            "delFlag": 0,
-            "parentName": "接口文档",
-            "level": 1,
-            "children": []
-          }
-        ]
+        "children": [{
+          "id": 47,
+          "createBy": null,
+          "createTime": null,
+          "lastUpdateBy": null,
+          "lastUpdateTime": null,
+          "parentId": 46,
+          "name": "查看",
+          "url": null,
+          "perms": "sys:swagger:view",
+          "type": 2,
+          "icon": null,
+          "orderNum": 0,
+          "delFlag": 0,
+          "parentName": "接口文档",
+          "level": 1,
+          "children": []
+        }]
       },
       {
         "id": 38,
@@ -1244,8 +1243,7 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
+        "children": [{
             "id": 39,
             "createBy": null,
             "createTime": null,
@@ -1261,26 +1259,24 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统监控",
             "level": 1,
-            "children": [
-              {
-                "id": 40,
-                "createBy": null,
-                "createTime": null,
-                "lastUpdateBy": null,
-                "lastUpdateTime": null,
-                "parentId": 39,
-                "name": "查看",
-                "url": null,
-                "perms": "sys:druid:view",
-                "type": 2,
-                "icon": null,
-                "orderNum": 0,
-                "delFlag": 0,
-                "parentName": "数据监控",
-                "level": 2,
-                "children": []
-              }
-            ]
+            "children": [{
+              "id": 40,
+              "createBy": null,
+              "createTime": null,
+              "lastUpdateBy": null,
+              "lastUpdateTime": null,
+              "parentId": 39,
+              "name": "查看",
+              "url": null,
+              "perms": "sys:druid:view",
+              "type": 2,
+              "icon": null,
+              "orderNum": 0,
+              "delFlag": 0,
+              "parentName": "数据监控",
+              "level": 2,
+              "children": []
+            }]
           },
           {
             "id": 41,
@@ -1298,26 +1294,24 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "系统监控",
             "level": 1,
-            "children": [
-              {
-                "id": 42,
-                "createBy": null,
-                "createTime": null,
-                "lastUpdateBy": null,
-                "lastUpdateTime": null,
-                "parentId": 41,
-                "name": "查看",
-                "url": null,
-                "perms": "sys:monitor:view",
-                "type": 2,
-                "icon": null,
-                "orderNum": 0,
-                "delFlag": 0,
-                "parentName": "服务监控",
-                "level": 2,
-                "children": []
-              }
-            ]
+            "children": [{
+              "id": 42,
+              "createBy": null,
+              "createTime": null,
+              "lastUpdateBy": null,
+              "lastUpdateTime": null,
+              "parentId": 41,
+              "name": "查看",
+              "url": null,
+              "perms": "sys:monitor:view",
+              "type": 2,
+              "icon": null,
+              "orderNum": 0,
+              "delFlag": 0,
+              "parentName": "服务监控",
+              "level": 2,
+              "children": []
+            }]
           }
         ]
       },
@@ -1337,26 +1331,24 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
-            "id": 49,
-            "createBy": null,
-            "createTime": null,
-            "lastUpdateBy": null,
-            "lastUpdateTime": null,
-            "parentId": 48,
-            "name": "查看",
-            "url": null,
-            "perms": "sys:generator:view",
-            "type": 2,
-            "icon": null,
-            "orderNum": 0,
-            "delFlag": 0,
-            "parentName": "代码生成",
-            "level": 1,
-            "children": []
-          }
-        ]
+        "children": [{
+          "id": 49,
+          "createBy": null,
+          "createTime": null,
+          "lastUpdateBy": null,
+          "lastUpdateTime": null,
+          "parentId": 48,
+          "name": "查看",
+          "url": null,
+          "perms": "sys:generator:view",
+          "type": 2,
+          "icon": null,
+          "orderNum": 0,
+          "delFlag": 0,
+          "parentName": "代码生成",
+          "level": 1,
+          "children": []
+        }]
       },
       {
         "id": 50,
@@ -1374,26 +1366,24 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
-            "id": 51,
-            "createBy": null,
-            "createTime": null,
-            "lastUpdateBy": null,
-            "lastUpdateTime": null,
-            "parentId": 50,
-            "name": "查看",
-            "url": null,
-            "perms": "sys:online:view",
-            "type": 2,
-            "icon": null,
-            "orderNum": 0,
-            "delFlag": 0,
-            "parentName": "在线用户",
-            "level": 1,
-            "children": []
-          }
-        ]
+        "children": [{
+          "id": 51,
+          "createBy": null,
+          "createTime": null,
+          "lastUpdateBy": null,
+          "lastUpdateTime": null,
+          "parentId": 50,
+          "name": "查看",
+          "url": null,
+          "perms": "sys:online:view",
+          "type": 2,
+          "icon": null,
+          "orderNum": 0,
+          "delFlag": 0,
+          "parentName": "在线用户",
+          "level": 1,
+          "children": []
+        }]
       },
       {
         "id": 52,
@@ -1411,8 +1401,7 @@ export function findMenuTree() {
         "delFlag": 0,
         "parentName": null,
         "level": 0,
-        "children": [
-          {
+        "children": [{
             "id": 53,
             "createBy": null,
             "createTime": null,
@@ -1428,26 +1417,24 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "使用案例",
             "level": 1,
-            "children": [
-              {
-                "id": 54,
-                "createBy": null,
-                "createTime": null,
-                "lastUpdateBy": null,
-                "lastUpdateTime": null,
-                "parentId": 53,
-                "name": "查看",
-                "url": null,
-                "perms": "sys:dict:view",
-                "type": 2,
-                "icon": null,
-                "orderNum": 0,
-                "delFlag": 0,
-                "parentName": "国际化",
-                "level": 2,
-                "children": []
-              }
-            ]
+            "children": [{
+              "id": 54,
+              "createBy": null,
+              "createTime": null,
+              "lastUpdateBy": null,
+              "lastUpdateTime": null,
+              "parentId": 53,
+              "name": "查看",
+              "url": null,
+              "perms": "sys:dict:view",
+              "type": 2,
+              "icon": null,
+              "orderNum": 0,
+              "delFlag": 0,
+              "parentName": "国际化",
+              "level": 2,
+              "children": []
+            }]
           },
           {
             "id": 55,
@@ -1465,26 +1452,24 @@ export function findMenuTree() {
             "delFlag": 0,
             "parentName": "使用案例",
             "level": 1,
-            "children": [
-              {
-                "id": 56,
-                "createBy": null,
-                "createTime": null,
-                "lastUpdateBy": null,
-                "lastUpdateTime": null,
-                "parentId": 55,
-                "name": "查看",
-                "url": null,
-                "perms": "sys:dict:view",
-                "type": 2,
-                "icon": null,
-                "orderNum": 0,
-                "delFlag": 0,
-                "parentName": "换皮肤",
-                "level": 2,
-                "children": []
-              }
-            ]
+            "children": [{
+              "id": 56,
+              "createBy": null,
+              "createTime": null,
+              "lastUpdateBy": null,
+              "lastUpdateTime": null,
+              "parentId": 55,
+              "name": "查看",
+              "url": null,
+              "perms": "sys:dict:view",
+              "type": 2,
+              "icon": null,
+              "orderNum": 0,
+              "delFlag": 0,
+              "parentName": "换皮肤",
+              "level": 2,
+              "children": []
+            }]
           }
         ]
       }
@@ -1498,14 +1483,14 @@ export function findMenuTree() {
 }
 
 export function setParentName(data) {
-  if(data == null) {
+  if (data == null) {
     return
   }
   let len = data.length
-  for(let i=0; i<len; i++) {
+  for (let i = 0; i < len; i++) {
     let menu = data[i]
     menu.parentName = 'menu' + menu.parentId
-    if(menu.children != null) {
+    if (menu.children != null) {
       setParentName(menu.children)
     }
   }
