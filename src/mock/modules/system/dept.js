@@ -1,11 +1,11 @@
-/* 
+/*
  * 机构管理模块
  */
 
 // 保存
 export function save() {
   return {
-    url: 'sys_dept/save',
+    url: 'sys/dept/',
     type: 'post',
     data: {
       "code": 200,
@@ -17,8 +17,8 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'sys_dept/delete',
-    type: 'post',
+    url: 'sys/dept/',
+    type: 'delete',
     data: {
       "code": 200,
       "msg": null,
@@ -237,7 +237,7 @@ export function findDeptTree(params) {
     ]
   }
   return {
-    url: 'sys_dept/findTree',
+    url: 'sys/dept/',
     type: 'get',
     data: findTreeData
   }

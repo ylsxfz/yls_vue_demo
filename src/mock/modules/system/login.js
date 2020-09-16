@@ -1,4 +1,4 @@
-/* 
+/*
  * 系统登录模块
  */
 
@@ -21,7 +21,7 @@ export function login() {
     }
   }
   return {
-    url: 'login',
+    url: 'sys/login',
     type: 'post',
     data: loginData
   }

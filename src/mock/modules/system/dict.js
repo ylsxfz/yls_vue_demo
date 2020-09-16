@@ -5,7 +5,7 @@
 // 保存
 export function save() {
   return {
-    url: 'sys_dict/save',
+    url: 'sys/dict/',
     type: 'post',
     data: {
       "code": 200,
@@ -17,8 +17,8 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'sys_dict/delete',
-    type: 'post',
+    url: 'sys/dict/',
+    type: 'delete',
     data: {
       "code": 200,
       "msg": null,
@@ -69,7 +69,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'sys_dict/findByPage',
+    url: 'sys/dict/lists',
     type: 'post',
     data: findPageData
   }

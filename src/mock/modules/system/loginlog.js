@@ -107,7 +107,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'sys_login_log/findByPage',
+    url: 'sy/loginLog/lists',
     type: 'post',
     data: findPageData
   }

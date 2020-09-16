@@ -1,11 +1,11 @@
-/* 
+/*
  * 系统配置模块
  */
 
 // 保存
 export function save() {
   return {
-    url: 'sys_config/save',
+    url: 'sys/config/',
     type: 'post',
     data: {
       "code": 200,
@@ -17,8 +17,8 @@ export function save() {
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'sys_config/delete',
-    type: 'post',
+    url: 'sys/config/',
+    type: 'delete',
     data: {
       "code": 200,
       "msg": null,
@@ -55,7 +55,7 @@ export function findPage(params) {
     }
   }
   return {
-    url: 'sys_config/findByPage',
+    url: 'sys/config/lists',
     type: 'post',
     data: findPageData
   }

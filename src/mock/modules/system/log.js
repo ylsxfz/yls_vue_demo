@@ -23,7 +23,7 @@ export function findPage(params) {
   findPageData.data.totalSize = 50
   findPageData.data.content = content
   return {
-    url: 'sys_log/findByPage',
+    url: 'sys/log/lists',
     type: 'post',
     data: findPageData
   }
