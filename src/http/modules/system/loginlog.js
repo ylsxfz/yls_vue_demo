@@ -1,21 +1,21 @@
 import axios from '../../axios'
 
-/* 
+/*
  * 操作日志模块
  */
 
 // 删除
 export const batchDelete = (data) => {
     return axios({
-        url: '/sys_login_log/delete',
-        method: 'post',
+        url: '/sys/loginLog/',
+        method: 'delete',
         data
     })
 }
 // 分页查询
 export const findPage = (data) => {
     return axios({
-        url: '/sys_login_log/findByPage',
+        url: '/sys/loginLog/lists',
         method: 'post',
         data
     })

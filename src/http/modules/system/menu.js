@@ -22,16 +22,17 @@ export const batchDelete = (data) => {
 }
 // 查找导航菜单树
 export const findNavTree = (params) => {
+    console.log(params)
     return axios({
-        url: '/sys_menu/findNavTree',
+        url: '/sys/menu/'+params.userName,
         method: 'get',
-        params
+        //params
     })
 }
 // 查找导航菜单树
 export const findMenuTree = () => {
     return axios({
-        url: '/sys_menu/findMenuTree',
+        url: '/sys/menu/findMenuTree',
         method: 'get'
     })
 }

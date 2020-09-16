@@ -1,6 +1,6 @@
 import axios from '../../axios'
 
-/* 
+/*
  * 机构管理模块
  */
 
@@ -23,7 +23,7 @@ export const batchDelete = (data) => {
 // 查询机构树
 export const findDeptTree = () => {
     return axios({
-        url: '/sys_dept/findTree',
+        url: '/sys/dept/lists',
         method: 'get'
     })
 }

@@ -87,7 +87,7 @@ export default {
         });
     },
     refreshCaptcha: function(){
-      this.loginForm.src = this.global.baseUrl + "/captcha.jpg?t=" + new Date().getTime();
+      this.loginForm.src = this.global.baseUrl + "/sys/login/captcha.jpg?t=" + new Date().getTime();
     },
     reset() {
       this.$refs.loginForm.resetFields()

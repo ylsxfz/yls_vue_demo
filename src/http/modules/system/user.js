@@ -7,7 +7,7 @@ import axios from '../../axios'
 // 保存
 export const save = (data) => {
     return axios({
-        url: '/sys_user/save',
+        url: '/sys/user/',
         method: 'post',
         data
     })
@@ -15,15 +15,15 @@ export const save = (data) => {
 // 删除
 export const batchDelete = (data) => {
     return axios({
-        url: '/sys_user/delete',
-        method: 'post',
+        url: '/sys/user/',
+        method: 'delete',
         data
     })
 }
 // 分页查询
 export const findPage = (data) => {
     return axios({
-        url: '/sys_user/findByPage',
+        url: '/sys/user/lists',
         method: 'post',
         data
     })
@@ -31,7 +31,7 @@ export const findPage = (data) => {
 // 导出Excel用户信息
 export const exportUserExcelFile = (data) => {
     return axios({
-        url: '/sys_user/exportUserExcelFile',
+        url: '/sys/user/exportUserExcelFile',
         method: 'post',
         data
     })
@@ -39,7 +39,7 @@ export const exportUserExcelFile = (data) => {
 // 查找用户的菜单权限标识集合
 export const findPermissions = (params) => {
     return axios({
-        url: '/sys_user/findPermissions',
+        url: '/sys/user/permissions',
         method: 'get',
         params
     })
@@ -47,9 +47,9 @@ export const findPermissions = (params) => {
 // 根据用户名查找
 export const findByName = (params) => {
     return axios({
-        url: '/sys_user/findByName',
+        url: '/sys/user/'+params.name,
         method: 'get',
-        params
+        //params
     })
 }
 // 更新用户密码
