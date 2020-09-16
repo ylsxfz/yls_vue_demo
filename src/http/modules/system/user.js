@@ -55,7 +55,7 @@ export const findByName = (params) => {
 // 更新用户密码
 export const updatePassword = (params) => {
     return axios({
-        url: '/sys_user/updatePassword',
+        url: '/sys/user/updatePassword',
         method: 'get',
         params
     })
