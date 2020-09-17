@@ -3,21 +3,21 @@
  */
 
 // 保存
-export function save() {
-  return {
-    url: 'sys/user/',
-    type: 'post',
-    data: {
-      "code": 200,
-      "msg": null,
-      "data": 1
-    }
-  }
-}
+// export function save() {
+//   return {
+//     url: 'sys/user/',
+//     type: 'post',
+//     data: {
+//       "code": 200,
+//       "msg": null,
+//       "data": 1
+//     }
+//   }
+// }
 // 批量删除
 export function batchDelete() {
   return {
-    url: 'sys_user/',
+    url: 'sys/user/',
     type: 'delete',
     data: {
       "code": 200,
@@ -66,7 +66,7 @@ export function findPermissions() {
     ]
   }
   return {
-    url: 'sys/user/'+"id",
+    url: 'sys/user/permissions',
     type: 'get',
     data: permsData
   }

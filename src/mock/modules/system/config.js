@@ -3,17 +3,17 @@
  */
 
 // 保存
-export function save() {
-  return {
-    url: 'sys/config/',
-    type: 'post',
-    data: {
-      "code": 200,
-      "msg": null,
-      "data": 1
-    }
-  }
-}
+// export function save() {
+//   return {
+//     url: 'sys/config/',
+//     type: 'post',
+//     data: {
+//       "code": 200,
+//       "msg": null,
+//       "data": 1
+//     }
+//   }
+// }
 // 批量删除
 export function batchDelete() {
   return {
