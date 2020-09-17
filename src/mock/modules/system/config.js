@@ -2,30 +2,6 @@
  * 系统配置模块
  */
 
-// 保存
-// export function save() {
-//   return {
-//     url: 'sys/config/',
-//     type: 'post',
-//     data: {
-//       "code": 200,
-//       "msg": null,
-//       "data": 1
-//     }
-//   }
-// }
-// 批量删除
-export function batchDelete() {
-  return {
-    url: 'sys/config/',
-    type: 'delete',
-    data: {
-      "code": 200,
-      "msg": null,
-      "data": 1
-    }
-  }
-}
 // 分页查询
 export function findPage(params) {
   let findPageData = {

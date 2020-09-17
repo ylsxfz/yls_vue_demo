@@ -2,30 +2,6 @@
  * 角色管理模块
  */
 
-// 保存
-// export function save() {
-//   return {
-//     url: 'sys/role/',
-//     type: 'post',
-//     data: {
-//       "code": 200,
-//       "msg": null,
-//       "data": 1
-//     }
-//   }
-// }
-// 批量删除
-export function batchDelete() {
-  return {
-    url: 'sys/role/',
-    type: 'delete',
-    data: {
-      "code": 200,
-      "msg": null,
-      "data": 1
-    }
-  }
-}
 // 查询全部
 export function findAll() {
   let findAllData = {

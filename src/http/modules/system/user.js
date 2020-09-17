@@ -47,9 +47,9 @@ export const findPermissions = (params) => {
 // 根据用户名查找
 export const findByName = (params) => {
     return axios({
-        url: '/sys/user/'+params.name,
+        url: '/sys/user/',
         method: 'get',
-        //params
+        params
     })
 }
 // 更新用户密码
