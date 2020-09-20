@@ -11,11 +11,11 @@ import * as config from './modules/system/config'
 import * as log from './modules/system/log'
 import * as loginlog from './modules/system/loginlog'
 //yls
-import * as datasource_manage from './modules/dataSourceManage'
+import * as datasource_manage from './modules/template/dataSourceManage'
 import * as request_utils from './modules/common/requestUtils'
 import * as response_utils from './modules/common/responseUtils'
 import * as echart_map from './modules/echarts/echartMap'
-
+import * as jl_index from './modules/jilin/jlIndex'
 
 // 默认全部导出
 export default {
@@ -31,5 +31,6 @@ export default {
     datasource_manage,
     request_utils,
     response_utils,
-    echart_map
+    echart_map,
+    jl_index,
 }
