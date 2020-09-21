@@ -195,22 +195,8 @@ export function findPage(params) {
 //批量删除
 export function batchDelete() {
   return {
-    url: 'datasource_manage/delete',
-    type: 'post',
-    data: {
-      "code": 200,
-      "msg": null,
-      "data": 1
-    }
-  }
-}
-
-
-//保存
-export function save() {
-  return {
-    url: 'datasource_manage/save',
-    type: 'post',
+    url: 'datasource_manage/',
+    type: 'delete',
     data: {
       "code": 200,
       "msg": null,

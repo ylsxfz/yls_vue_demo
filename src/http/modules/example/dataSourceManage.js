@@ -1,4 +1,4 @@
-import axios from '../axios'
+import axios from '../../axios'
 
 /**
  * 数据源管理模块
@@ -16,8 +16,8 @@ export const findPage = (data) => {
 //批量删除
 export const batchDelete = (data) => {
   return axios({
-    url: '/datasource_manage/delete',
-    method: 'post',
+    url: '/datasource_manage/',
+    method: 'delete',
     data
   })
 }
@@ -25,11 +25,8 @@ export const batchDelete = (data) => {
 //保存
 export const save = (data) => {
   return axios({
-    url: '/datasource_manage/save',
+    url: '/datasource_manage/',
     method: 'post',
     data
   })
 }
-
-
-

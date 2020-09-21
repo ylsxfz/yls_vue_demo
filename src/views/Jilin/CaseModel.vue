@@ -36,8 +36,8 @@
       <table-column-filter-dialog ref="tableColumnFilterDialog" :columns="columns" @handleFilterColumns="handleFilterColumns">
       </table-column-filter-dialog>
     </div>
-    
-    
+
+
     <!--表格内容栏-->
     <kt-table permsEdit="sys:user:edit" permsDelete="sys:user:delete" :data="pageResult" :columns="filterColumns"
       @findPage="findByPage" @handleEdit="handleEdit" @handleDelete="handleDelete">
@@ -56,7 +56,7 @@
   import {
     format
   } from "@/utils/datetime"
-  
+
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -102,19 +102,11 @@
           name: 'name',
           value: this.filters.name
         }]
-        this.$api.user.findPage(this.pageRequest).then((res) => {
+        this.$api.jl_case_model.findPage(this.pageRequest).then((res) => {
           this.pageResult = res.data
-          this.findUserRoles()
         }).then(data != null ? data.callback : '')
       },
 
-      // 加载用户角色信息
-      findUserRoles: function() {
-        this.$api.role.findAll().then((res) => {
-          // 加载角色集合
-          this.roles = res.data
-        })
-      },
       //显示新增页面
       handleAdd: function() {
         return {}
@@ -187,10 +179,6 @@
             label: "状态",
             minWidth: 70
           },
-          // {prop:"createBy", label:"创建人", minWidth:120},
-          // {prop:"createTime", label:"创建时间", minWidth:120, formatter:this.dateFormat}
-          // {prop:"lastUpdateBy", label:"更新人", minWidth:100},
-          // {prop:"lastUpdateTime", label:"更新时间", minWidth:120, formatter:this.dateFormat}
         ]
         this.filterColumns = JSON.parse(JSON.stringify(this.columns));
       }
