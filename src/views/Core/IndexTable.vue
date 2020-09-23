@@ -3,7 +3,7 @@
     <!--表格栏-->
     <el-table class="index-table" :row-style="tableRowStyle" :header-cell-style="tableHeaderColor" :data="data.content"
        v-loading="loading" :element-loading-text="$t('action.loading')"
-      :border="border" stripe="false" :show-overflow-tooltip="showOverflowTooltip" :max-height="maxHeight" :size="size"
+      :border="border" :stripe="stripe" :show-overflow-tooltip="showOverflowTooltip" :max-height="maxHeight" :size="size"
       :align="align" style="width:100%;">
       <el-table-column v-for="column in columns" header-align="center" align="center" :prop="column.prop" :label="column.label"
         :width="column.width" :min-width="column.minWidth" :fixed="column.fixed" :key="column.prop" :type="column.type">

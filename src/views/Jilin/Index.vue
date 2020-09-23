@@ -5,25 +5,25 @@
         <span class="index-head">大屏监控主界面</span>
       </el-header>
       <el-main style="overflow: hidden;">
-        <el-row class='index-el-row' gutter=5>
+        <el-row class='index-el-row' :gutter="5">
           <!-- 左边 -->
           <el-col :span='10' class='index-left' style='height:100%;'>
-            <el-row :gutter=0 type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="24">
                 <div class="grid-content title-blue">&nbsp;&nbsp;热力图</div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height:50%;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height:50%;' class="row-bg" justify="center">
               <el-col :span="24">
                 <div class="grid-content left-map"></div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="24">
                 <div class="grid-content title-blue">&nbsp;&nbsp;流程图</div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height:40%;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height:40%;' class="row-bg" justify="center">
               <el-col :span="24">
                 <div class="grid-content left-liucheng"></div>
               </el-col>
@@ -32,7 +32,7 @@
 
           <!-- 右边 -->
           <el-col :span='14' class='index-right' style='height:100%;'>
-            <el-row :gutter=5 type="flex" style='height:15%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:15%;' class="row-bg" justify="center">
               <el-col :span="6">
                 <div class="grid-content right-top-one"></div>
               </el-col>
@@ -46,7 +46,7 @@
                 <div class="grid-content right-top-four"></div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据统计图</div>
               </el-col>
@@ -54,7 +54,7 @@
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据统计图</div>
               </el-col>
             </el-row>
-            <el-row :gutter=5 type="flex" style='height:25%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:25%;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content right-center-left-one"></div>
               </el-col>
@@ -62,7 +62,7 @@
                 <div class="grid-content right-center-right-one"></div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="24">
                 <div class="grid-content title-red">&nbsp;&nbsp;突出显示列表</div>
               </el-col>
@@ -78,7 +78,7 @@
                 </div>
               </el-col>
             </el-row>
-            <el-row :gutter=0 type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
               </el-col>
@@ -86,7 +86,7 @@
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
               </el-col>
             </el-row>
-            <el-row :gutter=5 type="flex" style='height:25%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:25%;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content index-data-list">
                   <!--表格内容栏-->
@@ -136,49 +136,35 @@
       // 处理表格列过滤显示
       initColumns: function() {
         this.columnShow001 = [{
-            prop: "id",
+            prop: "id001",
             label: "测试列001",
             minWidth: 130
           },
           {
-            prop: "name",
+            prop: "name001",
             label: "测试列001",
             minWidth: 156
           },
           {
-            prop: "nickname",
+            prop: "nickname001",
             label: "测试列001",
             minWidth: 150
-          },{
-            prop: "id",
-            label: "测试列001",
-            minWidth: 130
-          },
-          {
-            prop: "name",
-            label: "测试列001",
-            minWidth: 150
-          },
-          {
-            prop: "nickname",
-            label: "测试列001",
-            minWidth: 160
           }
         ]
         this.columns001 = JSON.parse(JSON.stringify(this.columnShow001));
 
         this.columnShow002 = [{
-            prop: "id",
+            prop: "id002",
             label: "测试列002",
             minWidth: 130
           },
           {
-            prop: "name",
+            prop: "name002",
             label: "测试列002",
             minWidth: 140
           },
           {
-            prop: "nickname",
+            prop: "nickname002",
             label: "测试列002",
             minWidth: 160
           }
@@ -187,17 +173,17 @@
 
 
         this.columnShow003 = [{
-            prop: "id",
+            prop: "id003",
             label: "测试列003",
             minWidth: 130
           },
           {
-            prop: "name",
+            prop: "name003",
             label: "测试列003",
             minWidth: 140
           },
           {
-            prop: "nickname",
+            prop: "nickname003",
             label: "测试列003",
             minWidth: 160
           }
