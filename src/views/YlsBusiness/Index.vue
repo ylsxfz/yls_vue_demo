@@ -63,22 +63,6 @@
               </el-col>
             </el-row>
             <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
-              <el-col :span="24">
-                <div class="grid-content title-red">&nbsp;&nbsp;突出显示列表</div>
-              </el-col>
-            </el-row>
-            <el-row :gutter="0" type="flex" style='height:25%;' class="row-bg" justify="center">
-              <el-col :span="24">
-                <div class="grid-content index-data-list">
-                  <!--表格内容栏-->
-                  <index-table permsEdit="sys:user:edit" permsDelete="sys:user:delete"
-                   :data="pageResult001" :columns="columns001"  @findPage="listHighRiskCues">
-
-                  </index-table>
-                </div>
-              </el-col>
-            </el-row>
-            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
               </el-col>
@@ -86,21 +70,15 @@
                 <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
               </el-col>
             </el-row>
-            <el-row :gutter="5" type="flex" style='height:25%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:50%;' class="row-bg" justify="center">
               <el-col :span="12">
-                <div class="grid-content index-data-list">
-                  <!--表格内容栏-->
-                 <index-table :data="pageResult002" :columns="columns002" @findPage="listJDSellers">
+                <div class="grid-content right-center-left-one">
 
-                  </index-table>
                 </div>
               </el-col>
               <el-col :span="12">
-                <div class="grid-content index-data-list">
-                  <!--表格内容栏-->
-                  <index-table :data="pageResult003" :columns="columns003" @findPage="listCriminalRecords">
+                <div class="grid-content right-center-right-one">
 
-                  </index-table>
                 </div>
               </el-col>
             </el-row>
@@ -123,115 +101,22 @@
           pageNum: 1,
           pageSize: 1
         },
-        columns001: [],
-        pageResult001: {},
-        columns002: [],
-        pageResult002: {},
-        columns003: [],
-        pageResult003: {},
       }
     },
 
     methods: {
-      // 处理表格列过滤显示
-      initColumns: function() {
-        this.columnShow001 = [{
-            prop: "id001",
-            label: "测试列001",
-            minWidth: 130
-          },
-          {
-            prop: "name001",
-            label: "测试列001",
-            minWidth: 156
-          },
-          {
-            prop: "nickname001",
-            label: "测试列001",
-            minWidth: 150
-          }
-        ]
-        this.columns001 = JSON.parse(JSON.stringify(this.columnShow001));
-
-        this.columnShow002 = [{
-            prop: "id002",
-            label: "测试列002",
-            minWidth: 130
-          },
-          {
-            prop: "name002",
-            label: "测试列002",
-            minWidth: 140
-          },
-          {
-            prop: "nickname002",
-            label: "测试列002",
-            minWidth: 160
-          }
-        ]
-        this.columns002 = JSON.parse(JSON.stringify(this.columnShow002));
-
-
-        this.columnShow003 = [{
-            prop: "id003",
-            label: "测试列003",
-            minWidth: 130
-          },
-          {
-            prop: "name003",
-            label: "测试列003",
-            minWidth: 140
-          },
-          {
-            prop: "nickname003",
-            label: "测试列003",
-            minWidth: 160
-          }
-        ]
-        this.columns003 = JSON.parse(JSON.stringify(this.columnShow003));
-      },
-
-      //加载表格数据
-      listHighRiskCues:function(data){
-        if (data !== null) {
-          this.pageRequest = data.pageRequest
-        }
-        this.$api.jl_index.listHighRiskCues(this.pageRequest).then((res)=>{
-          this.pageResult001 = res.data
-        }).then(data != null ? data.callback : '')
-      },
-
-
-
-      listJDSellers:function(data){
-        if (data !== null) {
-          this.pageRequest = data.pageRequest
-        }
-        this.$api.jl_index.listJDSellers(this.pageRequest).then((res)=>{
-          this.pageResult002 = res.data
-        }).then(data != null ? data.callback : '')
-      },
-
-      listCriminalRecords:function(data){
-        if (data !== null) {
-          this.pageRequest = data.pageRequest
-        }
-        this.$api.jl_index.listCriminalRecords(this.pageRequest).then((res)=>{
-          this.pageResult003 = res.data
-        }).then(data != null ? data.callback : '')
-      },
 
 
 
     },
 
     mounted() {
-      this.initColumns()
+
     }
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .index {
     height: 100%;
     width: 100%;

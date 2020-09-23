@@ -69,7 +69,7 @@
   }
 </script>
 
-<style>
+<style scoped="scoped">
   .el-row {
     margin-bottom: 20px;
     padding: 0 0 ;

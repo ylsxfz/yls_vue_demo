@@ -15,11 +15,6 @@ import * as datasource_manage from './modules/example/dataSourceManage'
 import * as request_utils from './modules/common/requestUtils'
 import * as response_utils from './modules/common/responseUtils'
 import * as echart_map from './modules/echarts/echartMap'
-// jl
-import * as jl_index from './modules/jilin/jlIndex'
-import * as jl_case_model from './modules/jilin/jlCaseModel'
-import * as jl_datasource_manage from './modules/jilin/jlDataSourceManage'
-import * as jl_interface_call from './modules/jilin/jlInterfaceCall'
 
 // 默认全部导出
 export default {
@@ -37,9 +32,4 @@ export default {
   request_utils,
   response_utils,
   echart_map,
-  // jl
-  jl_index,
-  jl_case_model,
-  jl_datasource_manage,
-  jl_interface_call,
 }
