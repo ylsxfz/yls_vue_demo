@@ -25,6 +25,23 @@ export function findNavTree() {
         "level": 0,
         "children": []
       }, {
+        "id": 10001,
+        "createBy": "admin",
+        "createTime": "2018-11-15T06:39:30.000+0000",
+        "lastUpdateBy": "admin",
+        "lastUpdateTime": "2018-11-15T06:56:18.000+0000",
+        "parentId": 0,
+        "name": "中国地图(echart)",
+        "url": "/YlsBusiness/mapChart",
+        "perms": "",
+        "type": 1,
+        "icon": "el-icon-s-home",
+        "orderNum": 5,
+        "delFlag": 0,
+        "parentName": null,
+        "level": 0,
+        "children": []
+      }, {
         "id": 102,
         "createBy": "admin",
         "createTime": "2018-11-15T06:39:30.000+0000",
