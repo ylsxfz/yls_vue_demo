@@ -55,14 +55,14 @@
                 normal: {
                   show: true,
                   fontSize: "10",
-                  color: "rgba(0,0,0,0.7)"
+                  color: "rgba(67, 0, 0, 0.7)"
                 }
               },
               //地图区域的多边形 图形样式，有 normal 和 emphasis 两个状态
               itemStyle: {
                 //normal 是图形在默认状态下的样式；
                 normal: {
-                  borderColor: "rgba(0, 0, 0, 0.2)"
+                  borderColor: "rgba(170, 0, 0, 0.2)"
                 },
                 //emphasis 是图形在高亮状态下的样式，比如在鼠标悬浮或者图例联动高亮时。
                 emphasis: {
@@ -572,14 +572,16 @@
 
 <style scoped>
   #container {
-    width: 1600px;
-    height: 800px;
+    width: 100%;
+    height: 820px;
     margin: 0px auto 0;
+    background-color: #06173b;
   }
 
   .btn {
+    margin-top: 1.25rem;
     position: absolute;
-    right: 10%;
+    right: 6%;
     z-index: 999;
   }
 </style>
