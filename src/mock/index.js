@@ -45,6 +45,9 @@ function fnCreate (mod, isOpen = true) {
             url = url + "/"
           }
           url = url + res.url
+          console.log(res.url);
+          console.log(res.type);
+          // 模糊匹配url
           Mock.mock(new RegExp(url), res.type, (opts) => {
             opts['data'] = opts.body ? JSON.parse(opts.body) : null
             delete opts.body

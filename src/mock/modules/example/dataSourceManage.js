@@ -195,12 +195,26 @@ export function findPage(params) {
 //批量删除
 export function batchDelete() {
   return {
-    url: 'datasource_manage/',
+    url: 'datasource_manage',
     type: 'delete',
     data: {
       "code": 200,
       "msg": null,
       "data": 1
     }
+  }
+}
+
+// 保存
+export function save(params) {
+  let findPageData = {
+    "code": 200,
+    "msg": null,
+    "data": {}
+  }
+  return {
+    url: 'datasource_manage',
+    type: 'post',
+    data: findPageData
   }
 }

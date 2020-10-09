@@ -80,6 +80,15 @@
   import {
     format
   } from "@/utils/datetime"
+
+  import {
+    submitCom
+  }from "@/utils/requestUtils"
+
+  import {
+    getFormResponse
+  }from "@/utils/responseUtils"
+
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -170,7 +179,7 @@
       //表单提交
       submitForm: function() {
         //调用统一封装的请求
-        this.$api.request_utils.submitCom(this,() => {
+        submitCom(this,() => {
           this.editLoading = true
           //封装请求参数
           let params = Object.assign({}, this.dataForm)
@@ -178,7 +187,7 @@
           //提交请求
           this.$api.datasource_manage.save(params).then((res) => {
             //调用统一封装的响应解析
-            this.$api.response_utils.getFormResponse(this, res)
+            getFormResponse(this, res)
           })
         })
       },

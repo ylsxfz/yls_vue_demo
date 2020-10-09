@@ -1,7 +1,7 @@
 /**
  * 表单响应统一封装
  */
-export const getFormResponse = (component, res) => {
+export function getFormResponse  (component, res)  {
   if (res.code == 200) {
     component.$message({
       message: '操作成功',
