@@ -1,10 +1,16 @@
 <template>
   <div class="page-container">
-    空白页面
+    <h1>测试页面</h1>
+    下拉框：<base-select @handleButton="handleButton"></base-select>
+    <p/>
+    时间范围组件：<BaseDateTimeFrame></BaseDateTimeFrame>
   </div>
 </template>
 
 <script>
+  import BaseSelect from "@/views/Core/Component/BaseSelect"
+  import BaseDateTimeFrame from "@/views/Core/Component/BaseDateTimeFrame"
+
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -23,8 +29,9 @@
     /**
      * components 组件注册
      */
-    comments: {
-
+    components: {
+      BaseSelect,
+      BaseDateTimeFrame,
     },
 
     /**
@@ -40,7 +47,9 @@
      * 注册方法函数
      */
     methods: {
-
+      handleButton:function(val){
+        console.log("下拉菜单的值：",val)
+      }
     },
 
 

@@ -2,7 +2,7 @@
   <div class="block">
     <span class="demonstration"></span>
     <el-date-picker
-      v-model="value1"
+      v-model="value"
       type="datetimerange"
       range-separator="至"
       start-placeholder="开始日期"
@@ -42,8 +42,7 @@
             }
           }]
         },
-        value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
-        value2: ''
+        value: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
       };
     }
   };

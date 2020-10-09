@@ -83,11 +83,11 @@
 
   import {
     submitCom
-  }from "@/utils/requestUtils"
+  }from "@/utils/http/requestUtils"
 
   import {
     getFormResponse
-  }from "@/utils/responseUtils"
+  }from "@/utils/http/responseUtils"
 
   //向外暴露的成员，可以使用任意变量来接收
   export default {
