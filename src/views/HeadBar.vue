@@ -91,21 +91,26 @@
       }
     },
     methods: {
+      
       openWindow(url) {
         window.open(url)
       },
+      
       selectNavBar(key, keyPath) {
         console.log(key, keyPath)
       },
-      // 折叠导航栏
+      
+      /* 折叠导航栏 */
       onCollapse: function() {
         this.$store.commit('onCollapse')
       },
-      // 切换主题
+      
+      /* 切换主题 */
       onThemeChange: function(themeColor) {
         this.$store.commit('setThemeColor', themeColor)
       },
-      // 语言切换
+      
+      /* 语言切换 */
       changeLanguage(lang) {
         lang === '' ? 'zh_cn' : lang
         this.$i18n.locale = lang

@@ -65,7 +65,7 @@
       }
     },
     methods: {
-      // 分页查询
+      /* 分页查询 */
       findPage: function() {
         this.loading = true
         let callback = res => {
@@ -77,12 +77,13 @@
         })
       },
 
-      // 换页刷新
+      /* 换页刷新 */
       refreshPageRequest: function(pageNum) {
         this.pageRequest.pageNum = pageNum
         this.findPage()
       },
-      //设置表格行的样式
+
+      /* 设置表格行的样式 */
       tableRowStyle({
         row,
         rowIndex
@@ -93,7 +94,7 @@
         }
       },
 
-      //设置表头行的样式
+      /* 设置表头行的样式 */
       tableHeaderColor({
         row,
         column,

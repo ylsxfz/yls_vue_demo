@@ -48,16 +48,18 @@ export default {
     }
   },
   methods: {
-    // 选择切换
+    /* 选择切换 */
     selectionChange: function (selections) {
       this.selections = selections
       
     },
-    // 设置可见性
+    
+    /* 设置可见性 */
     setDialogVisible: function (visible) {
       this.dialogVisible = visible
     },
-		// 处理表格列过滤显示
+    
+		/* 处理表格列过滤显示 */
     handleFilterColumns: function () {
       let filterColumns = []
       for(let i = 0; i <this.columns.length; i++) {
@@ -68,6 +70,7 @@ export default {
       }
 			this.$emit('handleFilterColumns', {filterColumns: JSON.parse(JSON.stringify(filterColumns))})
     },
+
     hasColumn: function (column) {
       for(let i = 0; i <this.selections.length; i++) {
         let col = this.selections[i]

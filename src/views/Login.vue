@@ -86,13 +86,16 @@ export default {
           })
         });
     },
+    
     refreshCaptcha: function(){
       this.loginForm.src = this.global.baseUrl + "/sys/login/captcha.jpg?t=" + new Date().getTime();
     },
+    
     reset() {
       this.$refs.loginForm.resetFields()
     },
-    // 切换主题
+    
+    /* 切换主题 */
     onThemeChange: function(themeColor) {
       this.$store.commit('setThemeColor', themeColor)
     }

@@ -1,7 +1,8 @@
 /*
  * 用户管理模块
  */
-// 分页查询
+
+/* 分页查询 */
 export function findPage(params) {
   let findPageData = {
     "code": 200,
@@ -271,7 +272,8 @@ export function findPage(params) {
     data: findPageData
   }
 }
-// 查找用户的菜单权限标识集合
+
+/* 查找用户的菜单权限标识集合 */
 export function findPermissions() {
   let permsData = {
     "code": 200,
@@ -307,7 +309,8 @@ export function findPermissions() {
     data: permsData
   }
 }
-// 根据用户名查找
+
+/* 根据用户名查找 */
 export function findByName(params) {
   let findPageData = {
     "code": 200,
@@ -347,7 +350,8 @@ export function findByName(params) {
     data: findPageData
   }
 }
-// 更新用户密码
+
+/* 更新用户密码 */
 export function updatePassword(params) {
   let findPageData = {
     "code": 200,
@@ -358,5 +362,31 @@ export function updatePassword(params) {
     url: 'sys/user/updatePassword',
     type: 'get',
     data: findPageData
+  }
+}
+
+/* 批量删除 */
+export function batchDelete() {
+  return {
+    url: 'sys/user/',
+    type: 'delete',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}
+
+/* 保存 */
+export function save(params) {
+  return {
+    url: 'sys/user',
+    type: 'post',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
   }
 }

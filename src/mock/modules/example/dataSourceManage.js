@@ -205,16 +205,15 @@ export function batchDelete() {
   }
 }
 
-// 保存
+/* 保存 */
 export function save(params) {
-  let findPageData = {
-    "code": 200,
-    "msg": null,
-    "data": {}
-  }
   return {
     url: 'datasource_manage',
     type: 'post',
-    data: findPageData
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
   }
 }

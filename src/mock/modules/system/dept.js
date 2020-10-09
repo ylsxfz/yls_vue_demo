@@ -218,3 +218,30 @@ export function findDeptTree(params) {
     data: findTreeData
   }
 }
+
+
+/* 批量删除 */
+export function batchDelete() {
+  return {
+    url: 'sys/dept',
+    type: 'delete',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}
+
+/* 保存 */
+export function save(params) {
+  return {
+    url: 'sys/dept',
+    type: 'post',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}

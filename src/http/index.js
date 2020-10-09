@@ -1,4 +1,6 @@
-// 导入所有接口
+/**
+ * 导入所有接口
+ */
 import api from './api'
 
 const install = Vue => {

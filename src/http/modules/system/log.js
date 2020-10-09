@@ -4,7 +4,7 @@ import axios from '../../axios'
  * 操作日志模块
  */
 
-// 删除
+/* 删除 */
 export const batchDelete = (data) => {
     return axios({
         url: '/sys/log/',
@@ -12,7 +12,8 @@ export const batchDelete = (data) => {
         data
     })
 }
-// 分页查询
+
+/* 分页查询 */
 export const findPage = (data) => {
     return axios({
         url: '/sys/log/lists',

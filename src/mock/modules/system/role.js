@@ -1128,3 +1128,31 @@ export function findRoleMenus(params) {
     data: findRoleMenuData
   }
 }
+
+
+
+/* 批量删除 */
+export function batchDelete() {
+  return {
+    url: 'sys/role/',
+    type: 'delete',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}
+
+/* 保存 */
+export function save(params) {
+  return {
+    url: 'sys/role/',
+    type: 'post',
+    data: {
+      "code": 200,
+      "msg": null,
+      "data": 1
+    }
+  }
+}

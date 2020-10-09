@@ -4,7 +4,7 @@ import axios from '../../axios'
  * 数据源管理模块
  */
 
-//分页查询
+/* 分页查询 */
 export const findPage = (data) => {
   return axios({
     url: '/datasource_manage/findByPage',
@@ -13,7 +13,7 @@ export const findPage = (data) => {
   })
 }
 
-//批量删除
+/* 批量删除 */
 export const batchDelete = (data) => {
   return axios({
     url: '/datasource_manage/',
@@ -22,7 +22,7 @@ export const batchDelete = (data) => {
   })
 }
 
-//保存
+/* 保存 */
 export const save = (data) => {
   return axios({
     url: '/datasource_manage/',

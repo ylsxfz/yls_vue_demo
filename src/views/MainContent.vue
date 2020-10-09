@@ -48,14 +48,16 @@ export default {
     }
   },
   methods: {
-    // tabs, 选中tab
+    
+    /* tabs, 选中tab */
     selectedTabHandle (tab) {
       tab = this.mainTabs.filter(item => item.name === tab.name)
       if (tab.length >= 1) {
         this.$router.push({ name: tab[0].name })
       }
     },
-    // tabs, 删除tab
+    
+    /* tabs, 删除tab */
     removeTabHandle (tabName) {
       this.mainTabs = this.mainTabs.filter(item => item.name !== tabName)
       if (this.mainTabs.length >= 1) {
@@ -69,20 +71,24 @@ export default {
         this.$router.push("/")
       }
     },
-    // tabs, 关闭当前
+    
+    /* tabs, 关闭当前 */
     tabsCloseCurrentHandle () {
       this.removeTabHandle(this.mainTabsActiveName)
     },
-    // tabs, 关闭其它
+    
+    /* tabs, 关闭其它 */
     tabsCloseOtherHandle () {
       this.mainTabs = this.mainTabs.filter(item => item.name === this.mainTabsActiveName)
     },
-    // tabs, 关闭全部
+    
+    /* tabs, 关闭全部 */
     tabsCloseAllHandle () {
       this.mainTabs = []
       this.$router.push("/")
     },
-    // tabs, 刷新当前
+    
+    /* tabs, 刷新当前 */
     tabsRefreshCurrentHandle () {
       var tempTabName = this.mainTabsActiveName
       this.removeTabHandle(tempTabName)

@@ -36,8 +36,8 @@
       <table-column-filter-dialog ref="tableColumnFilterDialog" :columns="columns" @handleFilterColumns="handleFilterColumns">
       </table-column-filter-dialog>
     </div>
-    
-    
+
+
     <!--表格内容栏-->
     <kt-table permsEdit="sys:user:edit" permsDelete="sys:user:delete" :data="pageResult" :columns="filterColumns"
       @findPage="findByPage" @handleEdit="handleEdit" @handleDelete="handleDelete">
@@ -56,7 +56,7 @@
   import {
     format
   } from "@/utils/datetime"
-  
+
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -93,7 +93,7 @@
      * 定义方法
      */
     methods: {
-      //分页查询数据
+      /* 分页查询数据 */
       findByPage: function(data) {
         if (data !== null) {
           this.pageRequest = data.pageRequest
@@ -108,19 +108,20 @@
         }).then(data != null ? data.callback : '')
       },
 
-      // 加载用户角色信息
+      /* 加载用户角色信息 */
       findUserRoles: function() {
         this.$api.role.findAll().then((res) => {
           // 加载角色集合
           this.roles = res.data
         })
       },
-      //显示新增页面
+
+      /* 显示新增页面 */
       handleAdd: function() {
         return {}
       },
 
-      //删除
+      /* 删除 */
       handleDelete: function() {
         return {}
       },
@@ -129,23 +130,23 @@
         return {}
       },
 
-      //列显示
+      /* 列显示 */
       displayFilterColumnsDialog: function() {
         this.$refs.tableColumnFilterDialog.setDialogVisible(true)
       },
 
-      // 处理表格列过滤显示
+      /* 处理表格列过滤显示 */
       handleFilterColumns: function(data) {
         this.filterColumns = data.filterColumns
         this.$refs.tableColumnFilterDialog.setDialogVisible(false)
       },
 
-      //导出Excel用户信息
+      /* 导出Excel用户信息 */
       exportUserExcelFile: function() {
         return {}
       },
 
-      // 处理表格列过滤显示
+      /* 处理表格列过滤显示 */
       initColumns: function() {
         this.columns = [{
             prop: "id",

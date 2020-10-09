@@ -161,7 +161,7 @@
      * 注册方法函数
      */
     methods: {
-      //分页查询数据
+      /* 分页查询数据 */
       findByPage: function(data) {
         if (data !== null) {
           this.pageRequest = data.pageRequest
@@ -176,7 +176,7 @@
         }).then(data != null ? data.callback : '')
       },
 
-      //表单提交
+      /* 表单提交 */
       submitForm: function() {
         //调用统一封装的请求
         submitCom(this,() => {
@@ -193,7 +193,7 @@
       },
 
 
-      //显示新增页面
+      /* 显示新增页面 */
       handleAdd: function() {
         this.dialogVisible = true
         this.operation = true
@@ -206,36 +206,36 @@
         }
       },
 
-      //删除
+      /* 删除 */
       handleDelete: function(data) {
         this.$api.datasource_manage.batchDelete(data.params).then(data != null ? data.callback : '')
       },
 
-      //显示编辑
+      /* 显示编辑 */
       handleEdit: function(params) {
         this.dialogVisible = true
         this.operation = false
         this.dataForm = Object.assign({}, params.row)
       },
 
-      //列显示
+      /* 列显示 */
       displayFilterColumnsDialog: function() {
         this.$refs.tableColumnFilterDialog.setDialogVisible(true)
       },
 
-      // 处理表格列过滤显示
+      /* 处理表格列过滤显示 */
       handleFilterColumns: function(data) {
         this.filterColumns = data.filterColumns
         this.$refs.tableColumnFilterDialog.setDialogVisible(false)
       },
 
-      //导出Excel用户信息
+      /* 导出Excel用户信息 */
       exportUserExcelFile: function() {
         return {}
       },
 
 
-      // 处理表格列过滤显示
+      /* 处理表格列过滤显示 */
       initColumns: function() {
         this.columns = [{
             prop: "id",
