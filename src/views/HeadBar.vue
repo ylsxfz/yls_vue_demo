@@ -97,7 +97,7 @@
       },
       
       selectNavBar(key, keyPath) {
-        console.log(key, keyPath)
+
       },
       
       /* 折叠导航栏 */

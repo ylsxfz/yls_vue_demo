@@ -183,7 +183,6 @@
           this.editLoading = true
           //封装请求参数
           let params = Object.assign({}, this.dataForm)
-          console.log(params)
           //提交请求
           this.$api.datasource_manage.save(params).then((res) => {
             //调用统一封装的响应解析

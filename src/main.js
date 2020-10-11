@@ -10,6 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.min.css'
 import echarts from 'echarts'
 import gojs from 'gojs'
+// import preventDuplicateClick from './utils/prevent-duplicate-clicks'
 
 Vue.use(ElementUI)  // 注册使用Element
 Vue.use(api)  // 注册使用API模块

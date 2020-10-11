@@ -26,14 +26,14 @@ export default function $axios(options) {
       },
       error => {
         // 请求发生错误时
-        console.log('request:', error)
+        // console.log('request:', error)
         // 判断请求超时
         if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
           console.log('timeout请求超时')
         }
         // 需要重定向到错误页面
         const errorInfo = error.response
-        console.log(errorInfo)
+        // console.log(errorInfo)
         if (errorInfo) {
           error = errorInfo.data // 页面那边catch的时候就能拿到详细的错误信息,看最下边的Promise.reject
           const errorStatus = errorInfo.status; // 404 403 500 ...
@@ -48,7 +48,7 @@ export default function $axios(options) {
     // response 响应拦截器
     instance.interceptors.response.use(
       response => {
-        console.log(response)
+        // console.log(response)
         return response.data
       },
       err => {
@@ -94,7 +94,7 @@ export default function $axios(options) {
         return Promise.reject(err) // 返回接口返回的错误信息
       }
     )
-    
+
     // 请求处理
     instance(options).then(res => {
       resolve(res)

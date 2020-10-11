@@ -42,7 +42,6 @@ export const exportUserExcelFile = (data) => {
 
 /* 查找用户的菜单权限标识集合 */
 export const findPermissions = (params) => {
-  console.log(params);
   return axios({
     url: '/sys/user/permissions/'+params.name,
     method: 'get',

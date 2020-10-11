@@ -482,7 +482,6 @@
 
         // 点击触发
         myChart.on("click", param => {
-          console.log(param)
           // let names = param.name;
           // showProvince(names,names);
           if (param.name in provinces) {
@@ -551,7 +550,6 @@
             西藏: "xizang.js",
             云南: "yunnan.js"
           };
-          console.log(`echarts/map/js/province/${filaName[pro]}`)
           require(`echarts/map/js/province/${filaName[pro]}`);
         }
 
