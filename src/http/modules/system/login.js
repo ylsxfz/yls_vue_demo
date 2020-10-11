@@ -16,7 +16,7 @@ export const login = data => {
 /* 登出 */
 export const logout = () => {
     return axios({
-        url: 'logout',
+        url: '/logout',
         method: 'get'
     })
 }

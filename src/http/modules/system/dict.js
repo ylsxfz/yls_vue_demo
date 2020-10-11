@@ -7,7 +7,7 @@ import axios from '../../axios'
 /* 保存 */
 export const save = (data) => {
   return axios({
-    url: '/sys/dict/',
+    url: '/sys/dict',
     method: 'post',
     data
   })
@@ -15,7 +15,7 @@ export const save = (data) => {
 /* 删除 */
 export const batchDelete = (data) => {
   return axios({
-    url: '/sys/dict/',
+    url: '/sys/dict',
     method: 'delete',
     data
   })

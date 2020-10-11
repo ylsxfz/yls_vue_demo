@@ -345,7 +345,7 @@ export function findByName(params) {
     }
   }
   return {
-    url: 'sys/user/',
+    url: 'sys/user',
     type: 'get',
     data: findPageData
   }

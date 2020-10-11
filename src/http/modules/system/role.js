@@ -7,7 +7,7 @@ import axios from '../../axios'
 /* 保存 */
 export const save = (data) => {
   return axios({
-    url: '/sys/role/',
+    url: '/sys/role',
     method: 'post',
     data
   })
@@ -16,7 +16,7 @@ export const save = (data) => {
 /* 删除 */
 export const batchDelete = (data) => {
   return axios({
-    url: '/sys/role/',
+    url: '/sys/role',
     method: 'delete',
     data
   })

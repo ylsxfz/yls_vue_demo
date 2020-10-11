@@ -7,7 +7,7 @@ import axios from '../../axios'
 /* 删除 */
 export const batchDelete = (data) => {
     return axios({
-        url: '/sys/log/',
+        url: '/sys/log',
         method: 'delete',
         data
     })

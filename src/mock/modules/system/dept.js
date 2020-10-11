@@ -213,7 +213,7 @@ export function findDeptTree(params) {
     ]
   }
   return {
-    url: 'sys/dept/',
+    url: 'sys/dept',
     type: 'get',
     data: findTreeData
   }
