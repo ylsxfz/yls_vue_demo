@@ -28,14 +28,14 @@ export const findNavTree = (params) => {
   return axios({
     url: '/sys/menu/' + params.userName,
     method: 'get',
-    params
+    // params
   })
 }
 
 /* 查找导航菜单树 */
 export const findMenuTree = () => {
   return axios({
-    url: '/sys/menu/findMenuTree',
+    url: '/sys/menu',
     method: 'get'
   })
 }

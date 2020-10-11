@@ -13,6 +13,7 @@ import * as loginlog from './modules/system/loginlog'
 // yls-component
 import * as datasource_manage from './modules/example/dataSourceManage'
 import * as echart_map from './modules/echarts/echartMap'
+import * as gojs_templete from './modules/gojs/gojsTemplete'
 
 // 默认全部导出
 export default {
@@ -28,4 +29,5 @@ export default {
   // yls-component
   datasource_manage,
   echart_map,
+  gojs_templete,
 }

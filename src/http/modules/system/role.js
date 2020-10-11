@@ -44,15 +44,15 @@ export const findRoleMenus = (params) => {
   return axios({
     url: '/sys/role/' + params.roleId,
     method: 'get',
-    params
+    // params
   })
 }
 
 /* 保存角色菜单集合 */
 export const saveRoleMenus = (data) => {
   return axios({
-    url: '/sys/role/saveRoleMenus',
-    method: 'post',
+    url: '/sys/role',
+    method: 'put',
     data
   })
 }

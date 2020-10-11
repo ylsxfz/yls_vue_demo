@@ -1,9 +1,9 @@
 <template>
   <div class="page-container">
     <h1>测试页面</h1>
-    下拉框：<base-select @handleButton="handleButton"></base-select>
-    <p/>
-    时间范围组件：<BaseDateTimeFrame></BaseDateTimeFrame>
+    下拉框：<base-select v-model="filters.selectValue" :options='options' @getSelectValue="getSelectValue"></base-select>
+    <p />
+    时间范围组件：<BaseDateTimeFrame v-model="filters.selectTime" @getSelectTImeFrame="getSelectTImeFrame"></BaseDateTimeFrame>
   </div>
 </template>
 
@@ -39,7 +39,26 @@
      */
     data() {
       return {
-
+        filters: {
+          selectValue: '',
+          selectTime: '',
+        },
+        options: [{
+          value: '选项1',
+          label: '黄金糕'
+        }, {
+          value: '选项2',
+          label: '双皮奶'
+        }, {
+          value: '选项3',
+          label: '蚵仔煎'
+        }, {
+          value: '选项4',
+          label: '龙须面'
+        }, {
+          value: '选项5',
+          label: '北京烤鸭'
+        }],
       }
     },
 
@@ -47,8 +66,16 @@
      * 注册方法函数
      */
     methods: {
-      handleButton:function(val){
-        console.log("下拉菜单的值：",val)
+      /* 获取下拉菜单的值 */
+      getSelectValue: function(val) {
+        this.filters.selectTime = val
+        console.log("下拉菜单的值：", val)
+      },
+
+      /* 获取时间范围组件的值 */
+      getSelectTImeFrame: function(val) {
+        this.filters.selectTime = val
+        console.log("时间范围组件的值：", val)
       }
     },
 

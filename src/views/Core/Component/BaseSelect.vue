@@ -1,5 +1,5 @@
 <template>
-  <el-select v-model="value" placeholder="请选择" @change="handleButton">
+  <el-select v-model="value" :placeholder=placeholder @change="getSelectValue">
     <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
     </el-option>
   </el-select>
@@ -7,34 +7,39 @@
 
 <script>
   export default {
+    props: {
+      options: {
+        type: Array,
+        required: true
+      },
+      // value: {
+      //   type: String,
+      //   //required: true,
+      // },
+
+      label: {
+        type: String,
+        default: "label"
+      },
+
+      placeholder: {
+        type: String,
+        default: "请选择..."
+      }
+    },
+
     data() {
       return {
-        options: [{
-          value: '选项1',
-          label: '黄金糕'
-        }, {
-          value: '选项2',
-          label: '双皮奶'
-        }, {
-          value: '选项3',
-          label: '蚵仔煎'
-        }, {
-          value: '选项4',
-          label: '龙须面'
-        }, {
-          value: '选项5',
-          label: '北京烤鸭'
-        }],
         value: ''
       }
     },
 
     methods: {
       // 下拉框点击事件
-      handleButton() {
+      getSelectValue() {
         /* 子组件通过事件发射向父组件传递事件及参数，$emit即为发射事件
            第一个参数为向父组件传递的事件名，第二个参数为向父组件传递的参数 */
-        this.$emit('handleButton', this.value);
+        this.$emit('getSelectValue', this.value);
       }
     },
 
