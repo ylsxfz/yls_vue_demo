@@ -12,6 +12,11 @@ import echarts from 'echarts'
 import gojs from 'gojs'
 // import preventDuplicateClick from './utils/prevent-duplicate-clicks'
 
+// 引入核心插件
+import coreplug from '@/plugin/coreplug'
+// 注册核心插件
+Vue.use(coreplug)
+
 Vue.use(ElementUI)  // 注册使用Element
 Vue.use(api)  // 注册使用API模块
 Vue.use(echarts) //注册使用echarts可视化插件

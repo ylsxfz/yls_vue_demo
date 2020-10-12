@@ -2,7 +2,7 @@
   <el-form :model="loginForm" :rules="fieldRules" ref="loginForm" label-position="left" label-width="0px" class="demo-ruleForm login-container">
     <span class="tool-bar">
       <!-- 主题切换 -->
-      <theme-picker style="float:right;" class="theme-picker" :default="themeColor" @onThemeChange="onThemeChange"></theme-picker>
+      <header-theme-picker style="float:right;" class="theme-picker" :default="themeColor" @onThemeChange="onThemeChange"></header-theme-picker>
     </span>
     <h2 class="title" style="padding-left:22px;" >系统登录</h2>
     <el-form-item prop="account">
@@ -36,11 +36,11 @@
 <script>
 import { mapState } from 'vuex'
 import Cookies from "js-cookie"
-import ThemePicker from "@/components/ThemePicker"
+import HeaderThemePicker from "@/layout/sys-head/header-theme-picker"
 export default {
   name: 'Login',
   components:{
-    ThemePicker
+    HeaderThemePicker
   },
   data() {
     return {

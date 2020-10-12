@@ -5,7 +5,7 @@
       <el-menu class="el-menu-demo" :background-color="themeColor" text-color="#fff" :active-text-color="themeColor"
         mode="horizontal">
         <el-menu-item index="1" @click="onCollapse">
-          <hamburger :isActive="collapse"></hamburger>
+          <header-hamburger :isActive="collapse"></header-hamburger>
         </el-menu-item>
       </el-menu>
     </span>
@@ -18,14 +18,26 @@
         <el-menu-item index="3" @click="openWindow('https://www.cnblogs.com/xifengxiaoma/')">{{$t("common.blog")}}</el-menu-item> -->
       </el-menu>
     </span>
+
     <!-- 工具栏 -->
     <span class="toolbar">
       <el-menu class="el-menu-demo" :background-color="themeColor" text-color="#14889A" :active-text-color="themeColor"
         mode="horizontal">
+        <!-- 系统全屏按钮 -->
         <el-menu-item index="1">
-          <!-- 主题切换 -->
-          <theme-picker class="theme-picker" :default="themeColor" @onThemeChange="onThemeChange">
-          </theme-picker>
+          <header-fullscreen/>
+        </el-menu-item>
+        <!-- 系统全屏按钮 -->
+        <el-menu-item index="1">
+          <header-theme/>
+        </el-menu-item>
+        <!-- 日志管理 -->
+        <el-menu-item index="1">
+          <header-log/>
+        </el-menu-item>
+        <!-- 搜索 -->
+        <el-menu-item index="1">
+          <header-search/>
         </el-menu-item>
         <el-menu-item index="2" v-popover:popover-lang>
           <!-- 语言切换 -->
@@ -41,7 +53,7 @@
             <li style="color:#fff;" class="fa fa-envelope-o fa-lg"></li>
           </el-badge>
           <el-popover ref="popover-message" placement="bottom-end" trigger="click">
-            <message-panel></message-panel>
+            <header-message-panel></header-message-panel>
           </el-popover>
         </el-menu-item>
         <el-menu-item index="4" v-popover:popover-notice>
@@ -50,14 +62,19 @@
             <li style="color:#fff;" class="fa fa-bell-o fa-lg"></li>
           </el-badge>
           <el-popover ref="popover-notice" placement="bottom-end" trigger="click">
-            <notice-panel></notice-panel>
+            <header-notice-panel></header-notice-panel>
           </el-popover>
         </el-menu-item>
-        <el-menu-item index="5" v-popover:popover-personal>
+        <el-menu-item index="5">
+          <!-- 主题切换 -->
+          <header-theme-picker class="theme-picker" :default="themeColor" @onThemeChange="onThemeChange">
+          </header-theme-picker>
+        </el-menu-item>
+        <el-menu-item index="6" v-popover:popover-personal>
           <!-- 用户信息 -->
           <span class="user-info"><img :src="user.avatar" />{{user.nickName}}</span>
           <el-popover ref="popover-personal" placement="bottom-end" trigger="click" :visible-arrow="false">
-            <personal-panel :user="user"></personal-panel>
+            <header-personal-panel :user="user"></header-personal-panel>
           </el-popover>
         </el-menu-item>
       </el-menu>
@@ -70,18 +87,26 @@
     mapState
   } from 'vuex'
   import mock from "@/mock/index"
-  import Hamburger from "@/components/Hamburger"
-  import ThemePicker from "@/components/ThemePicker"
-  import NoticePanel from "@/views/Core/NoticePanel"
-  import MessagePanel from "@/views/Core/MessagePanel"
-  import PersonalPanel from "@/views/Core/PersonalPanel"
+  import HeaderHamburger from "@/layout/sys-head/header-hamburger"
+  import HeaderThemePicker from "@/layout/sys-head/header-theme-picker"
+  import HeaderNoticePanel from "@/layout/sys-head/header-notice-panel"
+  import HeaderMessagePanel from "@/layout/sys-head/header-message-panel"
+  import HeaderPersonalPanel from "@/layout/sys-head/header-personal-panel"
+  import HeaderFullscreen from "@/layout/sys-head/header-fullscreen"
+  import HeaderTheme from "@/layout/sys-head/header-theme"
+  import HeaderLog from "@/layout/sys-head/header-log"
+  import HeaderSearch from "@/layout/sys-head/header-search"
   export default {
     components: {
-      Hamburger,
-      ThemePicker,
-      NoticePanel,
-      MessagePanel,
-      PersonalPanel
+      HeaderHamburger,
+      HeaderThemePicker,
+      HeaderNoticePanel,
+      HeaderMessagePanel,
+      HeaderPersonalPanel,
+      HeaderFullscreen,
+      HeaderTheme,
+      HeaderLog,
+      HeaderSearch,
     },
     data() {
       return {
@@ -91,25 +116,25 @@
       }
     },
     methods: {
-      
+
       openWindow(url) {
         window.open(url)
       },
-      
+
       selectNavBar(key, keyPath) {
 
       },
-      
+
       /* 折叠导航栏 */
       onCollapse: function() {
         this.$store.commit('onCollapse')
       },
-      
+
       /* 切换主题 */
       onThemeChange: function(themeColor) {
         this.$store.commit('setThemeColor', themeColor)
       },
-      
+
       /* 语言切换 */
       changeLanguage(lang) {
         lang === '' ? 'zh_cn' : lang
@@ -139,7 +164,6 @@
     }
   }
 </script>
-
 <style scoped lang="scss">
   .headbar {
     position: fixed;

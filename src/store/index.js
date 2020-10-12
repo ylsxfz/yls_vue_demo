@@ -9,6 +9,7 @@ import tab from './modules/tab'
 import user from './modules/user'
 import menu from './modules/menu'
 import iframe from './modules/iframe'
+import system from './system'
 
 const store = new vuex.Store({
     modules: {
@@ -16,7 +17,8 @@ const store = new vuex.Store({
         tab: tab,
         user: user,
         menu: menu,
-        iframe: iframe
+        iframe: iframe,
+        system:system,
     }
 })
 

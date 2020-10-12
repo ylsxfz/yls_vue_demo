@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "dayjs": "^1.9.1",
     "echarts": "^4.9.0",
     "element-ui": "^2.13.1",
     "font-awesome": "^4.7.0",
@@ -20,6 +21,7 @@
     "js-cookie": "^2.2.1",
     "mock": "^0.1.1",
     "mockjs": "^1.1.0",
+    "screenfull": "^5.0.2",
     "vue": "^2.5.2",
     "vue-i18n": "^8.17.3",
     "vue-router": "^3.0.1",

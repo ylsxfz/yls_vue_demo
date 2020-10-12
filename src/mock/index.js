@@ -13,7 +13,7 @@ import * as datasource_manage from './modules/example/dataSourceManage'
 
 // 1. 开启/关闭[所有模块]拦截, 通过调[openMock参数]设置.
 // 2. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
-// 3. 开启/关闭[业务模块中某个请求]拦截, 通过函数返回对象中的[isOpen属性]设置.
+// 3. 开启/关闭[业务模块中某个请求]拦truetruDASFASDFASDF截, 通过函数返回对象中的[isOpen属性]设置.
 let openMock = true
 fnCreate(user, openMock)
 fnCreate(log, openMock)
