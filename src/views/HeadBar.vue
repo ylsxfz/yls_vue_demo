@@ -13,7 +13,11 @@
     <span class="navbar">
       <el-menu :default-active="activeIndex" class="el-menu-demo" :background-color="themeColor" text-color="#fff"
         active-text-color="#ffd04b" mode="horizontal" @select="selectNavBar()">
-        <el-menu-item index="1" @click="$router.push('/')">{{$t("common.home")}}</el-menu-item>
+        <el-menu-item index="1" @click="$router.push({
+          path:'/system/info',
+          name:'system-info',
+          title:'系统介绍',
+        })">{{$t("common.systemInfo")}}</el-menu-item>
         <!-- <el-menu-item index="2" @click="openWindow('https://gitee.com/liuge1988/kitty/wikis/Home')">{{$t("common.doc")}}</el-menu-item>
         <el-menu-item index="3" @click="openWindow('https://www.cnblogs.com/xifengxiaoma/')">{{$t("common.blog")}}</el-menu-item> -->
       </el-menu>

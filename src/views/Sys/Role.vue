@@ -316,7 +316,7 @@
       renderContent(h, { node, data, store }) {
       	return (
       	<div class="column-container">
-      		<span style="text-algin:center;margin-right:80px;">{data.name}</span>
+      		<span style="text-algin:center;margin-right:80px;">{data.title}</span>
       		<span style="text-algin:center;margin-right:80px;">
       			<el-tag type={data.type === 0?'':data.type === 1?'success':'info'} size="small">
       				{data.type === 0?'目录':data.type === 1?'菜单':'按钮'}

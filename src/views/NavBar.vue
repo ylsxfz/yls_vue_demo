@@ -70,10 +70,11 @@
       handleRoute(route) {
         // tab标签页选中, 如果不存在则先添加
         var tab = this.mainTabs.filter(item => item.name === route.name)[0]
+        console.log(route)
         if (!tab) {
           tab = {
             name: route.name,
-            title: route.name,
+            title: route.meta.title,
             icon: route.meta.icon
           }
           this.mainTabs = this.mainTabs.concat(tab)

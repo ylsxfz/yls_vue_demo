@@ -67,7 +67,7 @@ export default {
   border: 1px solid #000;
   color: #FFF;
   transition: all .3s;
-  @extend %unable-select;
+  // @extend %unable-select;
   &.d2-source--active {
     opacity: 1;
   }

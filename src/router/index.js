@@ -20,12 +20,14 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: '首页',
+      title: '首页',
+      name:'index',
       component: Home,
       children: [
-        { 
-          path: '', 
-          name: '系统介绍', 
+        {
+          path: '/system/info',
+          title: '系统介绍',
+          name:'system-info',
           component: Intro,
           meta: {
             icon: 'fa fa-home fa-lg',
@@ -36,12 +38,14 @@ const router = new Router({
     },
     {
       path: '/login',
-      name: '登录',
+      title: '登录',
+      name:'login',
       component: Login
     },
     {
       path: '/404',
-      name: 'notFound',
+      name:'not-found',
+      title: 'notFound',
       component: NotFound
     }
   ]
@@ -136,6 +140,7 @@ function addDynamicRoutes (menuList = [], routes = []) {
         component: null,
         name: menuList[i].name,
         meta: {
+          title:menuList[i].title,
           icon: menuList[i].icon,
           index: menuList[i].id
         }

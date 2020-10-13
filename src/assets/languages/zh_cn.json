@@ -1,6 +1,7 @@
 {
     "common": {
         "home": "首页",
+        "systemInfo": "系统介绍",
         "login": "登录",
         "logout": "退出登录",
         "doc": "文档",

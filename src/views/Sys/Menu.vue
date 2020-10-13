@@ -4,7 +4,7 @@
     <div class="toolbar" style="float:left;padding-top:10px;padding-left:15px;">
       <el-form :inline="true" :model="filters" :size="size">
         <el-form-item>
-          <el-input v-model="filters.name" placeholder="名称"></el-input>
+          <el-input v-model="filters.title" placeholder="名称"></el-input>
         </el-form-item>
         <el-form-item>
           <kt-button icon="fa fa-search" :label="$t('action.search')" perms="sys:menu:view" type="primary" @click="findTreeData(null)" />
@@ -19,7 +19,7 @@
       element-loading-text="$t('action.loading')">
       <el-table-column prop="id" header-align="left" align="left" width="270" label="ID">
       </el-table-column>
-      <table-tree-column prop="name" header-align="center" treeKey="id" width="150" label="名称">
+      <table-tree-column prop="title" header-align="center" treeKey="id" width="150" label="名称">
       </table-tree-column>
       <el-table-column header-align="center" align="center" label="图标">
         <template slot-scope="scope">
@@ -58,8 +58,8 @@
             <el-radio v-for="(type, index) in menuTypeList" :label="index" :key="index">{{ type }}</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item :label="menuTypeList[dataForm.type] + '名称'" prop="name">
-          <el-input v-model="dataForm.name" :placeholder="menuTypeList[dataForm.type] + '名称'"></el-input>
+        <el-form-item :label="menuTypeList[dataForm.type] + '名称'" prop="title">
+          <el-input v-model="dataForm.title" :placeholder="menuTypeList[dataForm.type] + '名称'"></el-input>
         </el-form-item>
         <el-form-item label="上级菜单" prop="parentName">
           <popup-tree-input :data="popupTreeData" :props="popupTreeProps" :prop="dataForm.parentName==null||dataForm.parentName==''?'顶级菜单':dataForm.parentName"
@@ -142,7 +142,7 @@
         size: "small",
         loading: false,
         filters: {
-          name: ""
+          title: ""
         },
         tableTreeDdata: [],
         dialogVisible: false,
@@ -150,7 +150,7 @@
         dataForm: {
           id: 0,
           type: 1,
-          name: "",
+          title: "",
           parentId: 0,
           parentName: "",
           url: "",
@@ -160,7 +160,7 @@
           iconList: []
         },
         dataRule: {
-          name: [{
+          title: [{
             required: true,
             message: "菜单名称不能为空",
             trigger: "blur"
@@ -188,7 +188,7 @@
       getParentMenuTree: function(tableTreeDdata) {
         let parent = {
           parentId: 0,
-          name: "顶级菜单",
+          title: "顶级菜单",
           children: tableTreeDdata
         };
         return [parent];
@@ -201,7 +201,7 @@
           id: 0,
           type: 1,
           typeList: ["目录", "菜单", "按钮"],
-          name: "",
+          title: "",
           parentId: 0,
           parentName: "",
           url: "",
@@ -250,7 +250,7 @@
       /* 菜单树选中 */
       handleTreeSelectChange(data, node) {
         this.dataForm.parentId = data.id;
-        this.dataForm.parentName = data.name;
+        this.dataForm.parentName = data.title;
       },
       
       /* 图标选中 */
