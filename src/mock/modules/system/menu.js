@@ -129,7 +129,13 @@ export function findNavTree() {
           "name":"demo-component-editor-ueditor",
           "url": "/Demo/Component/editor/editor-ueditor/index",
           "icon": "el-icon-s-home",
-        }, ]
+        },  {
+        "id": 50000001,
+        "title": "代码高亮",
+        "icon": "el-icon-s-home",
+        "name":"demo-component-highlight",
+        "url": "/Demo/Component/highlight/index",
+      }]
       }, {
         "id": 40000001,
         "title": "ICON",
@@ -165,12 +171,6 @@ export function findNavTree() {
           "url": "/Demo/Component/icon/select-svg",
           "icon": "el-icon-s-home",
         }, ]
-      }, {
-        "id": 50000001,
-        "title": "代码高亮",
-        "icon": "el-icon-s-home",
-        "name":"demo-component-highlight",
-        "url": "/Demo/Component/highlight/index",
       },{
         "id": 60000001,
         "title": "全局状态管理",
@@ -246,12 +246,7 @@ export function findNavTree() {
           "name":"demo-pageCache-params",
           "url": "/Demo/PageCache/params",
           "icon": "el-icon-s-home",
-        }, ]
-      },{
-        "id": 80000001,
-        "title": "传参接参",
-        "icon": "el-icon-s-home",
-        "children": [{
+        }, {
           "id": 8000000001,
           "title": "传参",
           "name":'demo-page-argu-send',
@@ -264,6 +259,82 @@ export function findNavTree() {
           "url": "/Demo/PageArgu/get",
           "icon": "el-icon-s-home",
         }, ]
+      },{
+        "id": 90000001,
+        "title": "数据持久化",
+        "icon": "el-icon-s-home",
+        "children": [{
+          "id": 900000000001,
+          "title": "总览",
+          "name":"demo-db-all",
+          "url": "/Demo/DB/all",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000002,
+          "title": "公共存储",
+          "name":"demo-db-public",
+          "url": "/Demo/DB/public",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000003,
+          "title": "私有数据",
+          "name":"demo-db-user",
+          "url": "/Demo/DB/user",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000004,
+          "title": "路由存储",
+          "name":"demo-db-page-public",
+          "url": "/Demo/DB/Page-public",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000005,
+          "title": "私有路由存储",
+          "name":"demo-db-on",
+          "url": "/Demo/DB/Page-user",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000006,
+          "title": "路由快照",
+          "name":"demo-db-page-snapshot-public",
+          "url": "/Demo/DB/page-snapshot-public",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 900000000007,
+          "title": "私有路由快照",
+          "name":"demo-db-page-snapshot-user",
+          "url": "/Demo/DB/page-snapshot-user",
+          "icon": "el-icon-s-home",
+        },]
+      },{
+        "id": 110000001,
+        "title": "日志",
+        "icon": "el-icon-s-home",
+        "children": [{
+          "id": 1100000000001,
+          "title": "日志记录",
+          "name":"demo-log-log",
+          "url": "/Demo/log/log",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 1100000000002,
+          "title": "错误捕捉",
+          "name":"demo-log-error",
+          "url": "/Demo/log/error",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 1100000000003,
+          "title": "Ajax 错误",
+          "name":"demo-log-ajax",
+          "url": "/Demo/log/ajax",
+          "icon": "el-icon-s-home",
+        },{
+          "id": 1100000000004,
+          "title": "控制台日志",
+          "name":"demo-log-console",
+          "url": "/Demo/log/console",
+          "icon": "el-icon-s-home",
+        },]
       },
       // {
       //   "id": 445867483,

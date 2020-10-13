@@ -39,7 +39,7 @@ export default {
         if (valid) {
           this.$router.push({
             path:'/Demo/PageArgu/get',
-            name:'demoPageArguGet',
+            name:'demo-page-argu-get',
             params: {
               username: this.sendForm.username
             },
