@@ -31,52 +31,52 @@ export function findNavTree() {
         "children": [{
           "id": 1000000001,
           "name": "填充型-基础",
-          "url": "/Demo/container/full",
+          "url": "/Demo/Component/container/full",
           "icon": "el-icon-s-home",
         }, {
           "id": 1000000002,
           "name": "填充型-插槽",
-          "url": "/Demo/container/full-slot",
+          "url": "/Demo/Component/container/full-slot",
           "icon": "el-icon-s-home",
         }, {
           "id": 1000000003,
           "name": "填充型-滚动优化",
-          "url": "/Demo/container/full-bs",
+          "url": "/Demo/Component/container/full-bs",
           "icon": "el-icon-s-home",
         }, {
           "id": 2000000001,
           "name": "隐形模式-基础",
-          "url": "/Demo/container/ghost",
+          "url": "/Demo/Component/container/ghost",
           "icon": "el-icon-s-home",
         }, {
           "id": 2000000002,
           "name": "隐形模式-插槽",
-          "url": "/Demo/container/ghost-slot",
+          "url": "/Demo/Component/container/ghost-slot",
           "icon": "el-icon-s-home",
         }, {
           "id": 2000000003,
           "name": "隐形模式-滚动优化",
-          "url": "/Demo/container/ghost-bs",
+          "url": "/Demo/Component/container/ghost-bs",
           "icon": "el-icon-s-home",
         }, {
           "id": 3000000001,
           "name": "卡片型-基础",
-          "url": "/Demo/container/card",
+          "url": "/Demo/Component/container/card",
           "icon": "el-icon-s-home",
         }, {
           "id": 3000000002,
           "name": "卡片型-插槽",
-          "url": "/Demo/container/card-slot",
+          "url": "/Demo/Component/container/card-slot",
           "icon": "el-icon-s-home",
         }, {
           "id": 3000000003,
           "name": "卡片型-滚动优化",
-          "url": "/Demo/container/card-bs",
+          "url": "/Demo/Component/container/card-bs",
           "icon": "el-icon-s-home",
         }, {
           "id": 4000000002,
           "name": "方法",
-          "url": "/Demo/container/api",
+          "url": "/Demo/Component/container/api",
           "icon": "el-icon-s-home",
         }]
       }, {
@@ -86,12 +86,12 @@ export function findNavTree() {
         "children": [{
           "id": 2000000001,
           "name": "拖拽位置和大小",
-          "url": "/Demo/layout/demoGrid",
+          "url": "/Demo/Component/layout/demoGrid",
           "icon": "el-icon-s-home",
         }, {
           "id": 2000000002,
           "name": "区域划分",
-          "url": "/Demo/layout/splitpane",
+          "url": "/Demo/Component/layout/splitpane",
           "icon": "el-icon-s-home",
         }, ]
       }, {
@@ -101,17 +101,17 @@ export function findNavTree() {
         "children": [{
           "id": 3000000001,
           "name": "quill",
-          "url": "/Demo/editor/editor-quill/index",
+          "url": "/Demo/Component/editor/editor-quill/index",
           "icon": "el-icon-s-home",
         }, {
           "id": 3000000002,
           "name": "simpleMDE",
-          "url": "/Demo/editor/editor-simpleMDE/index",
+          "url": "/Demo/Component/editor/editor-simpleMDE/index",
           "icon": "el-icon-s-home",
         }, {
           "id": 3000000003,
           "name": "ueditor",
-          "url": "/Demo/editor/editor-ueditor/index",
+          "url": "/Demo/Component/editor/editor-ueditor/index",
           "icon": "el-icon-s-home",
         }, ]
       }, {
@@ -121,34 +121,34 @@ export function findNavTree() {
         "children": [{
           "id": 4000000001,
           "name": "list",
-          "url": "/Demo/icon/list",
+          "url": "/Demo/Component/icon/list",
           "icon": "el-icon-s-home",
         }, {
           "id": 4000000002,
           "name": "icon",
-          "url": "/Demo/icon/icon",
+          "url": "/Demo/Component/icon/icon",
           "icon": "el-icon-s-home",
         }, {
           "id": 4000000003,
           "name": "icon-svg",
-          "url": "/Demo/icon/icon-svg",
+          "url": "/Demo/Component/icon/icon-svg",
           "icon": "el-icon-s-home",
         }, {
           "id": 4000000004,
           "name": "select",
-          "url": "/Demo/icon/select",
+          "url": "/Demo/Component/icon/select",
           "icon": "el-icon-s-home",
         }, {
           "id": 4000000005,
           "name": "select-svg",
-          "url": "/Demo/icon/select-svg",
+          "url": "/Demo/Component/icon/select-svg",
           "icon": "el-icon-s-home",
         }, ]
       }, {
         "id": 50000001,
         "name": "代码高亮",
         "icon": "el-icon-s-home",
-        "url": "/Demo/highlight/index",
+        "url": "/Demo/Component/highlight/index",
       }
 
       //highlight

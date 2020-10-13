@@ -25,19 +25,23 @@
         mode="horizontal">
         <!-- 系统全屏按钮 -->
         <el-menu-item index="1">
-          <header-fullscreen/>
+          <header-fullscreen />
         </el-menu-item>
-        <!-- 系统全屏按钮 -->
+        <!-- 主题选择 -->
         <el-menu-item index="1">
-          <header-theme/>
+          <header-theme />
+        </el-menu-item>
+        <!-- 全局大小 -->
+        <el-menu-item index="1">
+          <header-size />
         </el-menu-item>
         <!-- 日志管理 -->
         <el-menu-item index="1">
-          <header-log/>
+          <header-log />
         </el-menu-item>
         <!-- 搜索 -->
         <el-menu-item index="1">
-          <header-search/>
+          <header-search />
         </el-menu-item>
         <el-menu-item index="2" v-popover:popover-lang>
           <!-- 语言切换 -->
@@ -96,6 +100,7 @@
   import HeaderTheme from "@/layout/sys-head/header-theme"
   import HeaderLog from "@/layout/sys-head/header-log"
   import HeaderSearch from "@/layout/sys-head/header-search"
+  import HeaderSize from "@/layout/sys-head/header-size"
   export default {
     components: {
       HeaderHamburger,
@@ -107,6 +112,7 @@
       HeaderTheme,
       HeaderLog,
       HeaderSearch,
+      HeaderSize,
     },
     data() {
       return {

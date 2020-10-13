@@ -1,11 +1,11 @@
 <template>
   <el-dropdown placement="bottom" size="small" @command="handleChange">
-    <el-button class="d2-mr btn-text can-hover" type="text">
-      <d2-icon name="font" style="font-size: 16px;"/>
+    <el-button class="sys-mr btn-text can-hover" type="text">
+      <sys-icon name="font" style="font-size: 16px;"/>
     </el-button>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item v-for="item in options" :key="item.value" :command="item.value">
-        <d2-icon :name="iconName(item.value)" class="d2-mr-5"/>{{item.label}}
+        <sys-icon :name="iconName(item.value)" style="color: #000000;" class="sys-mr-5"/>{{item.label}}
       </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
@@ -26,16 +26,16 @@ export default {
     }
   },
   computed: {
-    ...mapState('d2admin/size', [
+    ...mapState('system/size', [
       'value'
     ])
   },
   methods: {
     ...mapMutations({
-      pageKeepAliveClean: 'd2admin/page/keepAliveClean'
+      pageKeepAliveClean: 'system/page/keepAliveClean'
     }),
     ...mapActions({
-      sizeSet: 'd2admin/size/set'
+      sizeSet: 'system/size/set'
     }),
     handleChange (value) {
       this.sizeSet(value)
