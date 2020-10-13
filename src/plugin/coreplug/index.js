@@ -1,6 +1,7 @@
 // 组件
 import '@/components'
-
+// svg 图标
+import '@/assets/svg-icons'
 // 功能插件
 import pluginApi from '@/plugin/api'
 import pluginError from '@/plugin/error'

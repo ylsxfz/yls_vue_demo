@@ -1,5 +1,5 @@
 <template>
-  <pre class="d2-highlight hljs" v-html="highlightHTML"></pre>
+  <pre class="sys-highlight hljs" v-html="highlightHTML"></pre>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import highlight from 'highlight.js'
 import htmlFormat from './libs/htmlFormat'
 import './libs/style.github.css'
 export default {
-  name: 'd2-highlight',
+  name: 'sys-highlight',
   props: {
     code: {
       type: String,
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.d2-highlight {
+.sys-highlight {
   margin: 0px;
   border-radius: 4px;
 }

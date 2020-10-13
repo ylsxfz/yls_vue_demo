@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'd2-icon-svg',
+  name: 'sys-icon-svg',
   props: {
     name: {
       type: String,
@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     icon () {
-      return `#d2-${this.name}`
+      return `#sys-${this.name}`
     }
   }
 }

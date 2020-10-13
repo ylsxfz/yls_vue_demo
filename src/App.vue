@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
+// <style lang="scss">
+// @import '~@/assets/style/public-class.scss';
+// </style>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

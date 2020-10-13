@@ -6,12 +6,12 @@
       :placement="placement"
       width="300"
       trigger="click">
-      <el-row type="flex" justify="end" class="d2-mb-10" v-if="clearable">
+      <el-row type="flex" justify="end" class="sys-mb-10" v-if="clearable">
         <el-button
           type="danger"
           icon="el-icon-delete"
           size="mini"
-          class="d2-fr"
+          class="sys-fr"
           @click="selectIcon()">
           清空
         </el-button>
@@ -22,14 +22,14 @@
         placeholder="搜索 比如 'plus'"
         prefix-icon="el-icon-search">
       </el-input>
-      <el-row class="d2-icon-svg-select--group">
+      <el-row class="sys-icon-svg-select--group">
         <el-col
           v-for="(item, index) in iconFilted"
           :key="index"
-          class="d2-icon-svg-select--item"
+          class="sys-icon-svg-select--item"
           :span="4"
           @click.native="selectIcon(item)">
-          <d2-icon-svg :name="item"/>
+          <sys-icon-svg :name="item"/>
         </el-col>
       </el-row>
     </el-popover>
@@ -40,8 +40,8 @@
       v-bind="bind"
       style="max-width: 240px;">
       <template v-if="value" slot="prepend">
-        <d2-icon-svg
-          class="d2-icon-svg-select--input-preview"
+        <sys-icon-svg
+          class="sys-icon-svg-select--input-preview"
           :name="value"/>
       </template>
       <el-button v-popover:pop slot="append">
@@ -51,9 +51,9 @@
     <!-- 不允许用户输入 -->
     <el-button v-popover:pop v-if="!userInput">
       <span flex="dir:left main:center cross:center">
-        <d2-icon-svg
+        <sys-icon-svg
           v-if="value"
-          class="d2-icon-svg-select--input-preview d2-mr-10"
+          class="sys-icon-svg-select--input-preview sys-mr-10"
           :name="value"/>
         <span>{{value ? value : placeholder}}</span>
       </span>
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: 'd2-icon-svg-select',
+  name: 'sys-icon-svg-select',
   props: {
     // 值
     value: {
@@ -150,18 +150,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.d2-icon-svg-select--input-preview {
+.sys-icon-svg-select--input-preview {
   height: 14px;
   width: 14px;
   display: block;
 }
-.d2-icon-svg-select--group {
+.sys-icon-svg-select--group {
   max-height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
   margin-top: 10px;
 }
-.d2-icon-svg-select--item {
+.sys-icon-svg-select--item {
   height: 40px;
   display: flex;
   justify-content: center;
@@ -171,9 +171,9 @@ export default {
     width: 20px;
   }
   &:hover {
-    background-color: $color-bg;
+    background-color: black;
     border-radius: 4px;
-    box-shadow: inset 0px 0px 0px 1px $color-border-1;
+    box-shadow: inset 0px 0px 0px 1px 2px;
   }
 }
 </style>

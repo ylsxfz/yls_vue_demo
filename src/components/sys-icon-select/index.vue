@@ -6,12 +6,12 @@
       :placement="placement"
       width="300"
       trigger="click">
-      <el-row type="flex" justify="end" class="d2-mb-10" v-if="clearable">
+      <el-row type="flex" justify="end" class="sys-mb-10" v-if="clearable">
         <el-button
           type="danger"
           icon="el-icon-delete"
           size="mini"
-          class="d2-fr"
+          class="sys-fr"
           @click="selectIcon()">
           清空
         </el-button>
@@ -22,20 +22,20 @@
         placeholder="搜索 比如 'plus'"
         prefix-icon="el-icon-search">
       </el-input>
-      <el-collapse v-if="!searchMode" class="d2-icon-select--group" v-model="collapseActive">
-        <el-collapse-item v-for="(item, index) in icon" :key="index" :title="item.title" :name="index" class="d2-icon-select--class">
-          <el-row class="d2-icon-select--class-row">
-            <el-col class="d2-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
+      <el-collapse v-if="!searchMode" class="sys-icon-select--group" v-model="collapseActive">
+        <el-collapse-item v-for="(item, index) in icon" :key="index" :title="item.title" :name="index" class="sys-icon-select--class">
+          <el-row class="sys-icon-select--class-row">
+            <el-col class="sys-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
               <i :class="'fa fa-' + iconName"></i>
             </el-col>
           </el-row>
         </el-collapse-item>
       </el-collapse>
-      <div v-if="searchMode" class="d2-icon-select--group">
-        <div class="d2-icon-select--class" v-for="(item, index) in iconFilted" :key="index">
-          <div class="d2-icon-select--class-title">{{item.title}}</div>
-          <el-row class="d2-icon-select--class-row">
-            <el-col class="d2-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
+      <div v-if="searchMode" class="sys-icon-select--group">
+        <div class="sys-icon-select--class" v-for="(item, index) in iconFilted" :key="index">
+          <div class="sys-icon-select--class-title">{{item.title}}</div>
+          <el-row class="sys-icon-select--class-row">
+            <el-col class="sys-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
               <i :class="'fa fa-' + iconName"></i>
             </el-col>
           </el-row>
@@ -68,7 +68,7 @@
 <script>
 import icon from './data/index'
 export default {
-  name: 'd2-icon-select',
+  name: 'sys-icon-select',
   props: {
     // 值
     value: {
@@ -163,31 +163,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.d2-icon-select--group {
+.sys-icon-select--group {
   max-height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
   border-top: none;
   border-bottom: none;
-  .d2-icon-select--class {
-    .d2-icon-select--class-title {
+  .sys-icon-select--class {
+    .sys-icon-select--class-title {
       line-height: 30px;
       text-align: center;
-      background-color: $color-bg;
+      background-color: yellow;
       border-radius: 4px;
       margin: 10px 0px;
     }
-    .d2-icon-select--class-row {
-      .d2-icon-select--class-col {
+    .sys-icon-select--class-row {
+      .sys-icon-select--class-col {
         line-height: 40px;
         text-align: center;
-        color: $color-text-sub;
+        color: red;
         &:hover {
-          color: $color-text-main;
-          background-color: $color-bg;
+          color: red;
+          background-color: red;
           border-radius: 4px;
           font-size: 26px;
-          box-shadow: inset 0px 0px 0px 1px $color-border-1;
+          box-shadow: inset 0px 0px 0px 1px 2px;
         }
       }
     }

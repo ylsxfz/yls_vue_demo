@@ -1,16 +1,16 @@
 import d2Source from './components/d2-source.vue'
 
 const containers = {
-  full: () => import('./components/d2-container-full.vue'),
-  fullbs: () => import('./components/d2-container-full-bs.vue'),
-  ghost: () => import('./components/d2-container-ghost.vue'),
-  ghostbs: () => import('./components/d2-container-ghost-bs.vue'),
-  card: () => import('./components/d2-container-card.vue'),
-  cardbs: () => import('./components/d2-container-card-bs.vue')
+  full: () => import('./components/container-full.vue'),
+  fullbs: () => import('./components/container-full-bs.vue'),
+  ghost: () => import('./components/container-ghost.vue'),
+  ghostbs: () => import('./components/container-ghost-bs.vue'),
+  card: () => import('./components/container-card.vue'),
+  cardbs: () => import('./components/container-card-bs.vue')
 }
 
 export default {
-  name: 'd2-container',
+  name: 'sys-container',
   props: {
     // 容器样式
     type: {

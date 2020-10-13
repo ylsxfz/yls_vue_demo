@@ -1,7 +1,7 @@
 <template>
   <d2-container v-bind="$attrs">
     <iframe
-      class="d2-container-frame"
+      class="sys-container-frame"
       :src="src"
       frameborder="0"/>
   </d2-container>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'd2-container-frame',
+  name: 'sys-container-frame',
   props: {
     src: {
       type: String,
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.d2-container-frame {
+.sys-container-frame {
   position: absolute;
   top: 0px;
   left: 0px;

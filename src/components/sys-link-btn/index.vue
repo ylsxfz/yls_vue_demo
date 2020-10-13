@@ -2,7 +2,7 @@
   <el-button-group>
     <el-button v-if="title" size="mini" @click="$open(link)">{{title}}</el-button>
     <el-button size="mini" @click="$open(link)">
-      <d2-icon :name="icon"/>
+      <sys-icon :name="icon"/>
       {{link}}
     </el-button>
   </el-button-group>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'd2-link-btn',
+  name: 'sys-link-btn',
   props: {
     title: {
       type: String,
@@ -25,7 +25,7 @@ export default {
     link: {
       type: String,
       required: false,
-      default: 'https://github.com/d2-projects'
+      default: 'https://github.com/sys-projects'
     }
   }
 }
