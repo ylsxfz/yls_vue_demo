@@ -35,7 +35,7 @@ export default {
      * @param {Object} context
      * @param {String} param message {String} 信息
      * @param {String} param type {String} 类型
-     * @param {Object} payload meta {Object} 附带的信息
+     * @param {Object} meta {Object} 附带的信息
      */
     push ({ rootState, commit }, { message, type = 'info', meta }) {
       commit('push', {

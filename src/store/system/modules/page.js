@@ -89,7 +89,7 @@ export default {
      * @class opened
      * @description 更新页面列表上的某一项
      * @param {Object} context
-     * @param {Object} payload { index, params, query, fullPath } 路由信息
+     * @param {Object} { index, params, query, fullPath } 路由信息
      */
     async openedUpdate ({ state, commit, dispatch }, { index, params, query, fullPath }) {
       // 更新页面列表某一项
@@ -105,7 +105,7 @@ export default {
      * @class opened
      * @description 重排页面列表上的某一项
      * @param {Object} context
-     * @param {Object} payload { oldIndex, newIndex } 位置信息
+     * @param {Object} { oldIndex, newIndex } 位置信息
      */
     async openedSort ({ state, commit, dispatch }, { oldIndex, newIndex }) {
       // 重排页面列表某一项
@@ -119,7 +119,7 @@ export default {
      * @class opened
      * @description 新增一个 tag (打开一个页面)
      * @param {Object} context
-     * @param {Object} payload new tag info
+     * @param {Object} new tag info
      */
     async add ({ state, commit, dispatch }, { tag, params, query, fullPath }) {
       // 设置新的 tag 在新打开一个以前没打开过的页面时使用
@@ -138,7 +138,7 @@ export default {
      * @class current
      * @description 打开一个新的页面
      * @param {Object} context
-     * @param {Object} payload 从路由钩子的 to 对象上获取 { name, params, query, fullPath, meta } 路由信息
+     * @param {Object} 从路由钩子的 to 对象上获取 { name, params, query, fullPath, meta } 路由信息
      */
     async open ({ state, commit, dispatch }, { name, params, query, fullPath, meta }) {
       // 已经打开的页面
@@ -180,7 +180,7 @@ export default {
      * @class opened
      * @description 关闭一个 tag (关闭一个页面)
      * @param {Object} context
-     * @param {Object} payload { tagName: 要关闭的标签名字 }
+     * @param {Object} { tagName: 要关闭的标签名字 }
      */
     async close ({ state, commit, dispatch }, { tagName }) {
       // 预定下个新页面
@@ -218,7 +218,7 @@ export default {
      * @class opened
      * @description 更新一个 tag title
      * @param {Object} context
-     * @param {Object} payload { tagName: 要更新的标签名字, title: 新的标签名字 }
+     * @param {Object} { tagName: 要更新的标签名字, title: 新的标签名字 }
      */
     update ({ state }, { tagName, title }) {
       const index = state.opened.findIndex(page => page.fullPath === tagName)
@@ -231,7 +231,7 @@ export default {
      * @class opened
      * @description 关闭当前标签左边的标签
      * @param {Object} context
-     * @param {Object} payload { pageSelect: 当前选中的tagName }
+     * @param {Object} { pageSelect: 当前选中的tagName }
      */
     async closeLeft ({ state, commit, dispatch }, { pageSelect } = {}) {
       const pageAim = pageSelect || state.current
@@ -257,7 +257,7 @@ export default {
      * @class opened
      * @description 关闭当前标签右边的标签
      * @param {Object} context
-     * @param {Object} payload { pageSelect: 当前选中的tagName }
+     * @param {Object} { pageSelect: 当前选中的tagName }
      */
     async closeRight ({ state, commit, dispatch }, { pageSelect } = {}) {
       const pageAim = pageSelect || state.current
@@ -281,7 +281,7 @@ export default {
      * @class opened
      * @description 关闭当前激活之外的 tag
      * @param {Object} context
-     * @param {Object} payload { pageSelect: 当前选中的tagName }
+     * @param {Object} { pageSelect: 当前选中的tagName }
      */
     async closeOther ({ state, commit, dispatch }, { pageSelect } = {}) {
       const pageAim = pageSelect || state.current

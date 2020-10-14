@@ -22,7 +22,11 @@
     </div>
     <!-- 主内容区域 -->
     <div class="main-content">
-      <span>{{keepAlive}}</span>
+      <span>keepAlive(是否缓存) : {{keepAlive}}</span><br />
+      <span>grayActive(是否灰度模式) : {{grayActive}}</span><br />
+      <span>transitionActive(页面切换动画) : {{transitionActive}}</span><br />
+      <span>asideCollapse(菜单) : {{asideCollapse}}</span><br />
+      <span>asideTransition(菜单) : {{asideTransition}}</span><br />
 <!--      <keep-alive>
         <transition name="fade" mode="out-in">
             <router-view></router-view>
