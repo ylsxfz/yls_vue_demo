@@ -1,14 +1,14 @@
 <template>
-  <div class="d2-container-card">
-    <div v-if="$slots.header" class="d2-container-card__header" ref="header">
+  <div class="sys-container-card">
+    <div v-if="$slots.header" class="sys-container-card__header" ref="header">
       <slot name="header"/>
     </div>
-    <div class="d2-container-card__body" ref="body">
-      <div class="d2-container-card__body-card">
+    <div class="sys-container-card__body" ref="body">
+      <div class="sys-container-card__body-card">
         <slot/>
       </div>
     </div>
-    <div v-if="$slots.footer" class="d2-container-card__footer" ref="footer">
+    <div v-if="$slots.footer" class="sys-container-card__footer" ref="footer">
       <slot name="footer"/>
     </div>
   </div>

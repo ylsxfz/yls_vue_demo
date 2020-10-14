@@ -329,7 +329,7 @@
         this.filterColumns = JSON.parse(JSON.stringify(this.columns));
       }
     },
-    
+
     mounted() {
       this.findDeptTree()
       this.initColumns()

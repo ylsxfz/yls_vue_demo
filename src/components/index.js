@@ -3,7 +3,7 @@ import Vue from 'vue'
 // 注意 有些组件使用异步加载会有影响
 // 高亮组件
 Vue.component('sys-container', () => import('./sys-container'))
-Vue.component('d2Source', () => import('./sys-container/components/d2-source'))
+Vue.component('sysSource', () => import('./sys-container/components/sys-source'))
 // 图标组件
 Vue.component('sys-icon', () => import('./sys-icon'))
 Vue.component('sys-icon-select', () => import('./sys-icon-select'))

@@ -1,4 +1,4 @@
-import d2Source from './components/d2-source.vue'
+import sysSource from './components/sys-source.vue'
 
 const containers = {
   full: () => import('./components/container-full.vue'),
@@ -46,7 +46,7 @@ export default {
         onScroll={ e => this.$emit('scroll', e) }>
         { slots }
       </this.component>
-      <d2Source/>
+      <sysSource/>
     </div>
   },
   methods: {

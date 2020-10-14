@@ -11,8 +11,8 @@
       </el-radio-group>
     </div>
     <el-row style="margin: 10px;">
-      <el-alert title="点击图标复制代码" type="info" class="d2-m-10" style="width: auto;"/>
-      <el-col v-for="(iconItem, iconIndex) in iconShow.icon" :key="iconIndex" :span="6" class="d2-p-10">
+      <el-alert title="点击图标复制代码" type="info" class="sys-m-10" style="width: auto;"/>
+      <el-col v-for="(iconItem, iconIndex) in iconShow.icon" :key="iconIndex" :span="6" class="sys-p-10">
         <sys-icon-cell :icon="iconItem"/>
       </el-col>
     </el-row>

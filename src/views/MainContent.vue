@@ -1,5 +1,5 @@
 <template>
-  <div id="main-container" class="main-container" :class="$store.state.app.collapse?'position-collapse-left':'position-left'">
+  <div id="main-container" class="parent-main-container" :class="$store.state.app.collapse?'position-collapse-left':'position-left'">
     <!-- 标签页 -->
     <div class="tab-container">
       <el-tabs class="tabs" :class="$store.state.app.collapse?'position-collapse-left':'position-left'"
@@ -22,22 +22,39 @@
     </div>
     <!-- 主内容区域 -->
     <div class="main-content">
-      <keep-alive>
+      <span>{{keepAlive}}</span>
+<!--      <keep-alive>
         <transition name="fade" mode="out-in">
             <router-view></router-view>
         </transition>
-      </keep-alive>
+      </keep-alive> -->
+      <transition :name="transitionActive ? 'fade-transverse' : ''">
+        <keep-alive :include="keepAlive">
+          <router-view></router-view>
+        </keep-alive>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   data () {
     return {
     }
   },
   computed: {
+    ...mapState('system', {
+      keepAlive: state => state.page.keepAlive,
+      grayActive: state => state.gray.active,
+      transitionActive: state => state.transition.active,
+      asideCollapse: state => state.menu.asideCollapse,
+      asideTransition: state => state.menu.asideTransition
+    }),
+    ...mapGetters('system', {
+      themeActiveSetting: 'theme/activeSetting'
+    }),
     mainTabs: {
       get () { return this.$store.state.tab.mainTabs },
       set (val) { this.$store.commit('updateMainTabs', val) }
@@ -48,7 +65,7 @@ export default {
     }
   },
   methods: {
-    
+
     /* tabs, 选中tab */
     selectedTabHandle (tab) {
       tab = this.mainTabs.filter(item => item.name === tab.name)
@@ -56,7 +73,7 @@ export default {
         this.$router.push({ name: tab[0].name })
       }
     },
-    
+
     /* tabs, 删除tab */
     removeTabHandle (tabName) {
       this.mainTabs = this.mainTabs.filter(item => item.name !== tabName)
@@ -71,23 +88,23 @@ export default {
         this.$router.push("/")
       }
     },
-    
+
     /* tabs, 关闭当前 */
     tabsCloseCurrentHandle () {
       this.removeTabHandle(this.mainTabsActiveName)
     },
-    
+
     /* tabs, 关闭其它 */
     tabsCloseOtherHandle () {
       this.mainTabs = this.mainTabs.filter(item => item.name === this.mainTabsActiveName)
     },
-    
+
     /* tabs, 关闭全部 */
     tabsCloseAllHandle () {
       this.mainTabs = []
       this.$router.push("/system/info")
     },
-    
+
     /* tabs, 刷新当前 */
     tabsRefreshCurrentHandle () {
       var tempTabName = this.mainTabsActiveName
@@ -101,10 +118,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.main-container {
+.parent-main-container {
   padding: 0 5px 5px;
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 1px;
   right: 1px;
   bottom: 0px;
@@ -148,7 +165,7 @@ export default {
   }
   .main-content {
     position: absolute;
-    top: 45px;
+    top: 5px;
     left: 5px;
     right: 5px;
     bottom: 5px;

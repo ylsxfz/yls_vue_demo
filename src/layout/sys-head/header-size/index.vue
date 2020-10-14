@@ -1,8 +1,8 @@
 <template>
   <el-dropdown placement="bottom" size="small" @command="handleChange">
-    <el-button class="sys-mr btn-text can-hover" type="text">
+    <li>
       <sys-icon name="font" style="font-size: 16px;"/>
-    </el-button>
+    </li>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item v-for="item in options" :key="item.value" :command="item.value">
         <sys-icon :name="iconName(item.value)" style="color: #000000;" class="sys-mr-5"/>{{item.label}}

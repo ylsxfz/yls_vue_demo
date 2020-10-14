@@ -1,10 +1,10 @@
 <template>
-  <d2-container v-bind="$attrs">
+  <sys-container v-bind="$attrs">
     <iframe
       class="sys-container-frame"
       :src="src"
       frameborder="0"/>
-  </d2-container>
+  </sys-container>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
     src: {
       type: String,
       required: false,
-      default: 'https://d2.pub/zh/doc/d2-admin'
+      default: 'https://d2.pub/zh/doc/sys-admin'
     }
   }
 }

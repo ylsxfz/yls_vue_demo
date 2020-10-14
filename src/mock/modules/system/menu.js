@@ -233,6 +233,7 @@ export function findNavTree() {
           "title": "开启缓存",
           "name":"demo-pageCache-on",
           "url": "/Demo/PageCache/on",
+          "cache":true,
           "icon": "el-icon-s-home",
         }, {
           "id": 7000000002,
@@ -245,6 +246,7 @@ export function findNavTree() {
           "title": "路由缓存",
           "name":"demo-pageCache-params",
           "url": "/Demo/PageCache/params",
+           "cache":true,
           "icon": "el-icon-s-home",
         }, {
           "id": 8000000001,

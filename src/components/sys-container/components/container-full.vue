@@ -1,12 +1,12 @@
 <template>
-  <div class="d2-container-full">
-    <div v-if="$slots.header" class="d2-container-full__header" ref="header">
+  <div class="sys-container-full">
+    <div v-if="$slots.header" class="sys-container-full__header" ref="header">
       <slot name="header"/>
     </div>
-    <div class="d2-container-full__body" ref="body">
+    <div class="sys-container-full__body" ref="body">
       <slot/>
     </div>
-    <div v-if="$slots.footer" class="d2-container-full__footer" ref="footer">
+    <div v-if="$slots.footer" class="sys-container-full__footer" ref="footer">
       <slot name="footer"/>
     </div>
   </div>

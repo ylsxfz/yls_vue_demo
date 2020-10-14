@@ -1,15 +1,15 @@
 <template>
-  <div class="d2-container-ghost-bs">
-    <div v-if="$slots.header" class="d2-container-ghost-bs__header" ref="header">
+  <div class="sys-container-ghost-bs">
+    <div v-if="$slots.header" class="sys-container-ghost-bs__header" ref="header">
       <slot name="header"/>
     </div>
-    <div class="d2-container-ghost-bs__body" ref="wrapper">
-      <!-- https://github.com/d2-projects/d2-admin/issues/181 -->
+    <div class="sys-container-ghost-bs__body" ref="wrapper">
+      <!-- https://github.com/sys-projects/sys-admin/issues/181 -->
       <div>
         <slot/>
       </div>
     </div>
-    <div v-if="$slots.footer" class="d2-container-ghost-bs__footer" ref="footer">
+    <div v-if="$slots.footer" class="sys-container-ghost-bs__footer" ref="footer">
       <slot name="footer"/>
     </div>
   </div>

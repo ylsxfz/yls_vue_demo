@@ -1,10 +1,10 @@
 <template>
   <div
     v-if="show"
-    class="d2-source"
-    :class="{ 'd2-source--active': isActive }"
+    class="sys-source"
+    :class="{ 'sys-source--active': isActive }"
     @click="handleClick">
-    <d2-icon name="code"/> 本页源码
+    <sys-icon name="code"/> 本页源码
   </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.d2-source {
+.sys-source {
   $borderRadius: 4px;
   $paddingLR: 15px;
   $paddingTB: 7px;
@@ -68,7 +68,7 @@ export default {
   color: #FFF;
   transition: all .3s;
   // @extend %unable-select;
-  &.d2-source--active {
+  &.sys-source--active {
     opacity: 1;
   }
   &:hover {
