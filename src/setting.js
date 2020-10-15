@@ -50,24 +50,24 @@ export default {
       {
         title: '紫罗兰',
         name: 'violet',
-        preview: 'public/image/theme/violet/preview@2x.png'
+        preview: 'static/image/theme/violet/preview@2x.png'
       },
       {
         title: '简约线条',
         name: 'line',
         backgroundImage: 'image/theme/line/bg.jpg',
-        preview: 'public/image/theme/line/preview@2x.png'
+        preview: 'static/image/theme/line/preview@2x.png'
       },
       {
         title: '流星',
         name: 'star',
         backgroundImage: 'image/theme/star/bg.jpg',
-        preview: 'public/image/theme/star/preview@2x.png'
+        preview: 'static/image/theme/star/preview@2x.png'
       },
       {
         title: 'Tomorrow Night Blue (vsCode)',
         name: 'tomorrow-night-blue',
-        preview: 'public/image/theme/tomorrow-night-blue/preview@2x.png'
+        preview: 'static/image/theme/tomorrow-night-blue/preview@2x.png'
       }
     ]
   },
