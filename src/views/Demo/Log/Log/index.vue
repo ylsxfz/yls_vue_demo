@@ -21,7 +21,8 @@ export default {
   },
   methods: {
     handleAdd () {
-      this.$log.push(this.text)
+      console.log("记录日志")
+      //this.$log.push(this.text)
     }
   }
 }

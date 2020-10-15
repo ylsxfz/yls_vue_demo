@@ -10,7 +10,6 @@ import '@/components'
 // svg 图标
 import '@/assets/svg-icons'
 // 功能插件
-// import api from '@/plugin/api'
 import pluginError from '@/plugin/error'
 import pluginLog from '@/plugin/log'
 import pluginOpen from '@/plugin/open'

@@ -1,5 +1,6 @@
 export default {
-  UEDITOR_HOME_URL: `${process.env.BASE_URL}lib/UEditor/`,
+  //UEDITOR_HOME_URL: `${process.env.BASE_URL}lib/UEditor/`,
+  UEDITOR_HOME_URL: `static/lib/UEditor/`,
   // 编辑器不自动被内容撑高
   autoHeightEnabled: false,
   // 初始容器高度

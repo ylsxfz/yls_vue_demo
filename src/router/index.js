@@ -25,7 +25,7 @@ VueRouter.prototype.push = function push(location) {
 }
 
 const VueRouterReplace = VueRouter.prototype.replace
-VueRouter.prototype.replace = function replace (location) {
+VueRouter.prototype.replace = function replace(location) {
   return VueRouterReplace.call(this, location).catch(err => err)
 }
 
@@ -41,16 +41,27 @@ const router = new VueRouter({
       },
       component: _import('Home'),
       children: [{
-        path: '/system/info',
-        title: '系统介绍',
-        name: 'system-info',
-        component: _import('Intro/Intro'),
-        meta: {
-          icon: 'fa fa-home fa-lg',
+          path: '/system/info',
           title: '系统介绍',
-          index: 0
-        }
-      }]
+          name: 'system-info',
+          component: _import('Intro/Intro'),
+          meta: {
+            icon: 'fa fa-home fa-lg',
+            title: '系统介绍',
+            index: 0
+          }
+        }, // 系统 前端日志
+        {
+          path: '/system/log',
+          name: 'system-log',
+          meta: {
+            title: '前端日志',
+            // auth: true,
+            index: 1
+          },
+          component: _import('System/log')
+        },
+      ]
     },
     {
       path: '/login',
@@ -64,16 +75,7 @@ const router = new VueRouter({
       title: 'notFound',
       component: _import('404')
     },
-    // 系统 前端日志
-    {
-      path: '/log',
-      name: 'log',
-      meta: {
-        title: '前端日志',
-        auth: true
-      },
-      component: _import('System/log')
-    },
+
     // 刷新页面 必须保留
     {
       path: '/refresh',

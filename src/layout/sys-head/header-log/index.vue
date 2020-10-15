@@ -31,7 +31,7 @@ export default {
     ]),
     handleClick () {
       this.$router.push({
-        name: 'log'
+        path: '/system/log'
       })
     }
   }

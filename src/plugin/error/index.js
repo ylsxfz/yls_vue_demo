@@ -7,14 +7,14 @@ export default {
     function writeLog (logType) {
       return (error, vm, info = '') => {
         Vue.nextTick(() => {
-          // store.dispatch('system/log/push', {
-          //   message: `${info}: ${isObject(error) ? error.message : error}`,
-          //   type: logType,
-          //   meta: {
-          //     error,
-          //     vm
-          //   }
-          // })
+          store.dispatch('system/log/push', {
+            message: `${info}: ${isObject(error) ? error.message : error}`,
+            type: logType,
+            meta: {
+              error,
+              vm
+            }
+          })
           if (process.env.NODE_ENV !== 'development') return
           util.log.capsule('system', 'ErrorHandler', logType)
           util.log.danger('>>>>>> 错误信息 >>>>>>')
@@ -31,26 +31,26 @@ export default {
     }
     Vue.config.errorHandler = writeLog('danger')
     window.onunhandledrejection = error => {
-      // store.dispatch('system/log/push', {
-      //   message: get(error, 'reason.message', 'Unknown error'),
-      //   type: 'danger',
-      //   meta: {
-      //     error: get(error, 'reason'),
-      //     trace: get(error, 'reason.stack')
-      //   }
-      // })
+      store.dispatch('system/log/push', {
+        message: get(error, 'reason.message', 'Unknown error'),
+        type: 'danger',
+        meta: {
+          error: get(error, 'reason'),
+          trace: get(error, 'reason.stack')
+        }
+      })
     }
     window.onerror = (event, source, lineno, colno, error) => {
-      // store.dispatch('system/log/push', {
-      //   message: get(error, 'message', 'Unknown error'),
-      //   type: 'danger',
-      //   meta: {
-      //     error,
-      //     trace: get(error, 'stack'),
-      //     source: `${source}@${lineno}:${colno}`,
-      //     event: event
-      //   }
-      // })
+      store.dispatch('system/log/push', {
+        message: get(error, 'message', 'Unknown error'),
+        type: 'danger',
+        meta: {
+          error,
+          trace: get(error, 'stack'),
+          source: `${source}@${lineno}:${colno}`,
+          event: event
+        }
+      })
     }
   }
 }
