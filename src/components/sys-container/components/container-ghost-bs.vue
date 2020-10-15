@@ -4,7 +4,6 @@
       <slot name="header"/>
     </div>
     <div class="sys-container-ghost-bs__body" ref="wrapper">
-      <!-- https://github.com/sys-projects/sys-admin/issues/181 -->
       <div>
         <slot/>
       </div>

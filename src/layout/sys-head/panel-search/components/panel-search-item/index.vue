@@ -39,7 +39,7 @@ export default {
   height: 64px;
   margin: 0px -20px;
   &.can-hover {
-    @extend %unable-select;
+    // @extend %unable-select;
     margin: 0px;
     &:hover {
       background-color: #F5F7FA;
@@ -47,19 +47,19 @@ export default {
         .sys-panel-search-item__icon-box {
           i {
             font-size: 24px;
-            color: $color-primary;
+            // color: $color-primary;
           }
         }
       }
       .sys-panel-search-item__info {
         .sys-panel-search-item__info-title {
-          color: $color-text-main;
+          // color: $color-text-main;
         }
         .sys-panel-search-item__info-fullTitle {
-          color: $color-text-normal;
+          // color: $color-text-normal;
         }
         .sys-panel-search-item__info-path {
-          color: $color-text-normal;
+          // color: $color-text-normal;
         }
       }
     }
@@ -69,10 +69,10 @@ export default {
     .sys-panel-search-item__icon-box {
       height: 64px;
       width: 64px;
-      border-right: 1px solid $color-border-3;
+      // border-right: 1px solid $color-border-3;
       i {
         font-size: 20px;
-        color: $color-text-sub;
+        // color: $color-text-sub;
       }
       svg {
         height: 20px;
@@ -86,18 +86,18 @@ export default {
       font-size: 16px;
       line-height: 16px;
       font-weight: bold;
-      color: $color-text-normal;
+      // color: $color-text-normal;
     }
     .sys-panel-search-item__info-fullTitle {
       font-size: 10px;
       line-height: 14px;
-      color: $color-text-placehoder;
+      // color: $color-text-placehoder;
     }
     .sys-panel-search-item__info-path {
       margin-bottom: 4px;
       font-size: 10px;
       line-height: 14px;
-      color: $color-text-placehoder;
+      // color: $color-text-placehoder;
     }
   }
 }

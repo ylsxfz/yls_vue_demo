@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Fuse from 'fuse.js'
+// import Fuse from 'fuse.js'
 import { mapState } from 'vuex'
 import mixin from '../mixins/menu'
 export default {
@@ -174,7 +174,7 @@ export default {
       width: 500px;
     }
     .panel-search__tip {
-      @extend %unable-select;
+      // @extend %unable-select;
       margin-top: 20px;
       margin-bottom: 40px;
       font-size: 12px;

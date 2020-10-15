@@ -16,3 +16,5 @@ Vue.component('sys-highlight', () => import('./sys-highlight'))
 Vue.component('sys-quill', () => import('./sys-quill'))
 Vue.component('sys-ueditor', () => import('./sys-ueditor'))
 Vue.component('sys-mde', () => import('./sys-mde'))
+
+Vue.component('sys-markdown', () => import('./sys-markdown'))

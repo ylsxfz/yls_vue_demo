@@ -1,5 +1,5 @@
 <template>
-  <div id="main-container" class="parent-main-container" :class="$store.state.app.collapse?'position-collapse-left':'position-left'">
+  <div id="parent-main-container" class="parent-main-container" :class="$store.state.app.collapse?'position-collapse-left':'position-left'">
     <!-- 标签页 -->
     <div class="tab-container">
       <el-tabs class="tabs" :class="$store.state.app.collapse?'position-collapse-left':'position-left'"
@@ -32,7 +32,7 @@
             <router-view></router-view>
         </transition>
       </keep-alive> -->
-      <transition :name="transitionActive ? 'fade-transverse' : ''">
+      <transition :name="transitionActive ? 'fade-transverse' : ''"  mode="out-in">
         <keep-alive :include="keepAlive">
           <router-view></router-view>
         </keep-alive>
@@ -167,8 +167,11 @@ export default {
   .tabs-tools:hover {
     background: rgba(200, 206, 206, 1);
   }
+
+}
   .main-content {
-    position: absolute;
+    position:absolute;
+    overflow: auto;
     top: 5px;
     left: 5px;
     right: 5px;
@@ -176,7 +179,6 @@ export default {
     padding: 5px;
     // background: rgba(209, 212, 212, 0.5);
   }
-}
 .position-left {
   left: 200px;
 }
