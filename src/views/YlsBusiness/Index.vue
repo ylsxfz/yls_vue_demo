@@ -7,10 +7,10 @@
       <el-main style="overflow: hidden;">
         <el-row class='index-el-row' :gutter="5">
           <!-- 左边 -->
-          <el-col :span='10' class='index-left' style='height:100%;'>
+          <el-col :span='7' class='index-left' style='height:100%;'>
             <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="24">
-                <div class="grid-content title-blue">&nbsp;&nbsp;热力图</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
             </el-row>
             <el-row :gutter="0" type="flex" style='height:50%;' class="row-bg" justify="center">
@@ -20,7 +20,31 @@
             </el-row>
             <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="24">
-                <div class="grid-content title-blue">&nbsp;&nbsp;流程图</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
+              </el-col>
+            </el-row>
+            <el-row :gutter="0" type="flex" style='height:40%;' class="row-bg" justify="center">
+              <el-col :span="24">
+                <div class="grid-content left-liucheng"></div>
+              </el-col>
+            </el-row>
+          </el-col>
+
+          <!-- 中间 -->
+          <el-col :span='7' class='index-left' style='height:100%;'>
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+              <el-col :span="24">
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
+              </el-col>
+            </el-row>
+            <el-row :gutter="0" type="flex" style='height:50%;' class="row-bg" justify="center">
+              <el-col :span="24">
+                <div class="grid-content left-map"></div>
+              </el-col>
+            </el-row>
+            <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
+              <el-col :span="24">
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
             </el-row>
             <el-row :gutter="0" type="flex" style='height:40%;' class="row-bg" justify="center">
@@ -31,7 +55,7 @@
           </el-col>
 
           <!-- 右边 -->
-          <el-col :span='14' class='index-right' style='height:100%;'>
+          <el-col :span='10' class='index-right' style='height:100%;'>
             <el-row :gutter="5" type="flex" style='height:15%;' class="row-bg" justify="center">
               <el-col :span="6">
                 <div class="grid-content right-top-one"></div>
@@ -48,13 +72,13 @@
             </el-row>
             <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="12">
-                <div class="grid-content title-blue">&nbsp;&nbsp;数据统计图</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
               <el-col :span="12">
-                <div class="grid-content title-blue">&nbsp;&nbsp;数据统计图</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
             </el-row>
-            <el-row :gutter="5" type="flex" style='height:25%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:37%;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content right-center-left-one"></div>
               </el-col>
@@ -64,13 +88,13 @@
             </el-row>
             <el-row :gutter="0" type="flex" style='height: 2.1875rem;' class="row-bg" justify="center">
               <el-col :span="12">
-                <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
               <el-col :span="12">
-                <div class="grid-content title-blue">&nbsp;&nbsp;数据列表展示</div>
+                <div class="grid-content title-blue">&nbsp;&nbsp;图表</div>
               </el-col>
             </el-row>
-            <el-row :gutter="5" type="flex" style='height:50%;' class="row-bg" justify="center">
+            <el-row :gutter="5" type="flex" style='height:37%;' class="row-bg" justify="center">
               <el-col :span="12">
                 <div class="grid-content right-center-left-one">
 
@@ -124,7 +148,7 @@
     background-image: url(../../assets/images/indexBackground.png);
   }
 
-  .index-head{
+  .index-head {
     color: #60b3fc;
     font-weight: 800;
     font-size: 1.5625rem;

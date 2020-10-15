@@ -1,7 +1,7 @@
 <template>
   <el-tooltip effect="dark" :content="tooltipContent" placement="bottom">
     <li @click="handleClick">
-      <el-badge v-if="logLength > 0" :max="99" :value="logLengthError" :is-dot="logLengthError === 0">
+      <el-badge  class="badge" v-if="logLength > 0" :max="99" :value="logLengthError" :is-dot="logLengthError === 0">
         <sys-icon :name="logLengthError === 0 ? 'dot-circle-o' : 'bug'" style="font-size: 20px"/>
       </el-badge>
       <sys-icon v-else name="dot-circle-o" style="font-size: 20px"/>
@@ -37,3 +37,9 @@ export default {
   }
 }
 </script>
+
+<style scoped="scoped">
+  .badge {
+    line-height: 18px;
+  }
+</style>
