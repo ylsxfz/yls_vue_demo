@@ -1,7 +1,7 @@
 import { Message, MessageBox } from 'element-ui'
 import util from '@/libs/util.js'
 import router from '@/router'
-import api from '@/api'
+import api from '@/http'
 
 export default {
   namespaced: true,
