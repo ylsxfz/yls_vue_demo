@@ -45,7 +45,7 @@
         </el-menu-item>
         <!-- 搜索 -->
         <el-menu-item index="1">
-          <header-search />
+          <header-search @click="handleSearchClick"/>
         </el-menu-item>
         <el-menu-item index="2" v-popover:popover-lang>
           <!-- 语言切换 -->
@@ -105,6 +105,7 @@
   import HeaderLog from "@/layout/sys-head/header-log"
   import HeaderSearch from "@/layout/sys-head/header-search"
   import HeaderSize from "@/layout/sys-head/header-size"
+  import mixinSearch from '@/layout/mixins/search'
   export default {
     components: {
       HeaderHamburger,
