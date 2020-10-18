@@ -175,6 +175,7 @@
     }
   }
 </script>
+
 <style scoped lang="scss">
   .headbar {
     position: fixed;

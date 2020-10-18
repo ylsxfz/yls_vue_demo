@@ -65,9 +65,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/assets/style/public-class.scss';
 .page {
   .colorful {
-    //@extend %unable-select;
+    @extend %unable-select;
     line-height: 300px;
     font-size: 100px;
     font-weight: bold;
