@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import api from '@/http/api'
 import store from '@/store'
-import Cookies from "js-cookie"
+// import Cookies from "js-cookie"
+import util from '@/libs/util.js'
 import {
   getIFramePath,
   getIFrameUrl
@@ -105,6 +106,7 @@ router.beforeEach((to, from, next) => {
   // 登录界面登录成功之后，会把用户信息保存在会话
   // 存在时间为会话生命周期，页面关闭即失效。
   let userName = sessionStorage.getItem('user')
+  // let userName = util.cookies.get('username')
   if (to.path === '/login') {
     // 如果是访问登录界面，如果用户会话信息存在，代表已登录过，跳转到主页
     if (userName) {

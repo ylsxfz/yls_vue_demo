@@ -45,7 +45,7 @@
         {{$t("common.backupRestore")}}
       </div>
     </div>
-    <div class="personal-footer" @click="logout">
+    <div class="personal-footer" @click="logoff">
       <li class="fa fa-sign-out"></li>
       {{$t("common.logout")}}
     </div>
@@ -72,6 +72,9 @@
 </template>
 
 <script>
+  import {
+    mapActions
+  } from 'vuex'
   import {
     format
   } from "@/utils/datetime"
@@ -121,7 +124,36 @@
       }
     },
     methods: {
+      ...mapActions('system/account', [
+        'logout'
+      ]),
 
+      logoff: function() {
+        this.logout({
+          confirm: true
+        })
+      },
+
+      /* 清除缓存并退出登录 */
+      clearCache() {
+        this.$confirm("确认清除缓存并退出登录吗?", "提示", {
+            type: "warning"
+          })
+          .then(() => {
+            this.deleteCookie('token') // 清空Cookie里的token
+            this.logout({
+              confirm: false
+            })
+          })
+          .catch(() => {})
+      },
+
+      // 清除Cookie
+      deleteCookie(name) {
+        var myDate = new Date()
+        myDate.setTime(-1000) // 设置过期时间
+        document.cookie = name + "=''; expires=" + myDate.toGMTString();
+      },
       /* 打开个人中心 */
       openPersonCenter: function() {
         alert('待开发')
@@ -157,7 +189,7 @@
                     type: 'success'
                   })
                   this.$refs['updatePwdDataForm'].resetFields()
-                  this.logoutApi()
+                  this.logoff()
                 } else {
                   this.$message({
                     message: '操作失败, ' + res.msg,
@@ -170,43 +202,6 @@
           }
         })
       },
-
-      /* 退出登录 */
-      logout() {
-        this.$confirm("确认退出吗?", "提示", {
-            type: "warning"
-          })
-          .then(() => {
-            this.logoutApi()
-          })
-          .catch(() => {})
-      },
-
-      /* 清除缓存并退出登录 */
-      clearCache() {
-        this.$confirm("确认清除缓存并退出登录吗?", "提示", {
-            type: "warning"
-          })
-          .then(() => {
-            this.deleteCookie('token') // 清空Cookie里的token
-            this.logoutApi()
-          })
-          .catch(() => {})
-      },
-
-      logoutApi() {
-        sessionStorage.removeItem("user")
-        this.$router.push("/login")
-        this.$api.login.logout().then((res) => {}).catch(function(res) {})
-      },
-
-      /* 清除Cookie */
-      deleteCookie(name) {
-        var myDate = new Date()
-        myDate.setTime(-1000) // 设置过期时间
-        document.cookie = name + "=''; expires=" + myDate.toGMTString();
-      },
-
       /* 获取在线用户数 */
       countOnlineUser() {
         let pageRequest = {

@@ -1,7 +1,9 @@
 import axios from 'axios';
 import config from './config';
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
+import util from '@/libs/util.js'
 import router from '@/router'
+ 
 
 export default function $axios(options) {
   return new Promise((resolve, reject) => {
@@ -14,7 +16,8 @@ export default function $axios(options) {
     // request 请求拦截器
     instance.interceptors.request.use(
       config => {
-        let token = Cookies.get('token')
+        // let token = Cookies.get('token')
+        let token = util.cookies.get('token')
         // 发送请求时携带token
         if (token) {
           config.headers.token = token
