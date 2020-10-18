@@ -26,9 +26,10 @@ export default {
     Vue.prototype.$baseUrl = process.env.BASE_URL
     // 当前版本
     Vue.prototype.$version = process.env.VUE_APP_VERSION
+    
     // 构建时间
     Vue.prototype.$buildTime = process.env.VUE_APP_BUILD_TIME
-    Vue.prototype.global = global // 挂载全局配置模块
+    Vue.prototype.$global = global // 挂载全局配置模块
     Vue.prototype.$echarts = echarts // 挂载echarts模块
     Vue.prototype.$gojs = gojs //挂载gojs模块
 
