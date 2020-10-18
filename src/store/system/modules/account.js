@@ -128,6 +128,12 @@ export default {
       await dispatch('system/transition/load', null, {
         root: true
       })
+      // 持久化数据加载全局尺寸
+      await dispatch('system/size/load', null, {
+        root: true
+      })
+      
+      
       // 持久化数据加载上次退出时的多页列表
       await dispatch('system/page/openedLoad', null, {
         root: true
@@ -136,10 +142,7 @@ export default {
       await dispatch('system/menu/asideLoad', null, {
         root: true
       })
-      // 持久化数据加载全局尺寸
-      await dispatch('system/size/load', null, {
-        root: true
-      })
+
       // // 持久化数据加载颜色设置
       // await dispatch('system/color/load', null, {
       //   root: true

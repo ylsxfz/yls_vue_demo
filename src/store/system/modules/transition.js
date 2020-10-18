@@ -1,5 +1,6 @@
 // 设置文件
 import setting from '@/setting.js'
+import util from '@/libs/util'
 
 export default {
   namespaced: true,
@@ -23,6 +24,8 @@ export default {
         value: state.active,
         user: true
       }, { root: true })
+      util.log.capsule('页面动画','设置','success')
+      console.log(state.active)
     },
     /**
      * 从数据库读取页面过渡动画设置
@@ -36,6 +39,8 @@ export default {
         defaultValue: setting.transition.active,
         user: true
       }, { root: true })
+      util.log.capsule('页面动画','获取','success')
+      console.log(state.active)
     }
   }
 }

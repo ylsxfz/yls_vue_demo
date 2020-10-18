@@ -1,5 +1,6 @@
 import { get } from 'lodash'
 import setting from '@/setting.js'
+import util from '@/libs/util'
 
 export default {
   namespaced: true,
@@ -35,6 +36,8 @@ export default {
         value: state.activeName,
         user: true
       }, { root: true })
+      util.log.capsule('主题','设置','success')
+      console.log(state.activeName)
     },
     /**
      * @description 从持久化数据加载主题设置     * @param {Object} context
@@ -62,6 +65,8 @@ export default {
       }
       // 将 vuex 中的主题应用到 dom
       commit('dom')
+      util.log.capsule('主题','获取','success')
+      console.log(state.activeName)
     }
   },
   mutations: {

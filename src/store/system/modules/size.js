@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import router from '@/router'
+import util from '@/libs/util'
 
 export default {
   namespaced: true,
@@ -49,6 +50,8 @@ export default {
         value: state.value,
         user: true
       }, { root: true })
+      util.log.capsule('全局尺寸','设置','success')
+      console.log(size)
     },
     /**
      * @description 从持久化数据读取尺寸设置
@@ -64,6 +67,8 @@ export default {
       }, { root: true })
       // 应用
       dispatch('apply')
+      util.log.capsule('全局尺寸','获取','success')
+      console.log( state.value)
     }
   }
 }
