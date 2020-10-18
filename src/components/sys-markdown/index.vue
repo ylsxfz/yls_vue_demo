@@ -42,7 +42,7 @@ export default {
     } else if (this.source) {
       this.initWithMd()
     } else {
-      console.log('not mounted init')
+      //console.log('not mounted init')
     }
   },
   methods: {

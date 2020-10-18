@@ -131,7 +131,6 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(to => {
-  console.log(to)
   // 进度条
   NProgress.done()
   // 多页控制 打开新的页面
@@ -145,7 +144,7 @@ function addDynamicMenuAndRoutes(userName, to, from) {
   // 处理IFrame嵌套页面
   handleIFrameUrl(to.path)
   if (store.state.app.menuRouteLoaded) {
-    console.log('动态菜单和路由已经存在.')
+    util.log.capsule('动态路由','已经存在','success')
     return
   }
   api.menu.findNavTree({
@@ -244,9 +243,8 @@ function addDynamicRoutes(menuList = [], routes = []) {
   if (temp.length >= 1) {
     addDynamicRoutes(temp, routes)
   } else {
-    console.log('动态路由加载...')
+    util.log.capsule('动态路由','加载完成','success')
     console.log(routes)
-    console.log('动态路由加载完成.')
   }
   return routes
 }

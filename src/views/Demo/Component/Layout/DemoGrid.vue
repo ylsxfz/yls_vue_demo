@@ -81,7 +81,7 @@ export default {
     layoutUpdatedHandler (newLayout) {
       console.group('layoutUpdatedHandler')
       newLayout.forEach(e => {
-        console.log(`{'x': ${e.x}, 'y': ${e.y}, 'w': ${e.w}, 'h': ${e.h}, 'i': '${e.i}'},`)
+        //console.log(`{'x': ${e.x}, 'y': ${e.y}, 'w': ${e.w}, 'h': ${e.h}, 'i': '${e.i}'},`)
       })
       console.groupEnd()
     },

@@ -32,7 +32,7 @@ export default function $axios(options) {
         // console.log('request:', error)
         // 判断请求超时
         if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
-          console.log('timeout请求超时')
+          //console.log('timeout请求超时')
         }
         // 需要重定向到错误页面
         const errorInfo = error.response

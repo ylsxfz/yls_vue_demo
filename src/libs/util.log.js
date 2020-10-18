@@ -77,4 +77,5 @@ log.danger = function (text) {
   log.colorful([{ text, type: 'danger' }])
 }
 
+
 export default log

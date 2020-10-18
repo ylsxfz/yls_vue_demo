@@ -23,6 +23,7 @@ export default {
           console.log(vm)
           util.log.danger('>>>>>> Error >>>>>>')
           console.log(error)
+          util.log.capsule('system', 'ErrorHandler', logType)
         })
       }
     }

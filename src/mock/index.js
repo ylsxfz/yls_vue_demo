@@ -1,4 +1,5 @@
 import Mock from 'mockjs'
+import util from '@/libs/util'
 import { baseUrl } from '@/utils/global'
 import * as login from './modules/system/login'
 import * as user from './modules/system/user'
@@ -50,7 +51,9 @@ function fnCreate (mod, isOpen = true) {
             opts['data'] = opts.body ? JSON.parse(opts.body) : null
             delete opts.body
             console.log('\n')
+            util.log.capsule('cmock拦截','请求','success')
             console.log('%cmock拦截, 请求: ', 'color:blue', opts)
+            util.log.capsule('cmock拦截','响应','success')
             console.log('%cmock拦截, 响应: ', 'color:blue', res.data)
             return res.data
           })

@@ -32,7 +32,6 @@ export default {
         captcha: "1234"
       }
       const res = await login(userInfo)
-      console.log(username, password)
       // 设置 cookie 一定要存 uuid 和 token 两个 cookie
       // 整个系统依赖这两个数据进行校验和存储
       // uuid 是用户身份唯一标识 用户注册的时候确定 并且不可改变 不可重复
@@ -42,7 +41,6 @@ export default {
       util.cookies.set('username', res.data.name)
       util.cookies.set('token', res.data.token)
       sessionStorage.setItem('user', username) // 保存用户到本地会话
-      console.log(util.cookies.getAll)
       // 设置 vuex 用户信息
       await dispatch('system/user/set', {
         name: res.name
@@ -50,7 +48,7 @@ export default {
         root: true
       })
       // 用户登录后从持久化数据加载一系列的设置
-      //await dispatch('load')
+      await dispatch('load')
       return res
     },
 
@@ -74,7 +72,6 @@ export default {
         util.cookies.remove('username')
         sessionStorage.removeItem("user")
         const res = await logout();
-        console.log("注销用户：",res)
         // 清空 vuex 用户信息
         await dispatch('system/user/set', {}, {
           root: true
@@ -143,10 +140,10 @@ export default {
       await dispatch('system/size/load', null, {
         root: true
       })
-      // 持久化数据加载颜色设置
-      await dispatch('system/color/load', null, {
-        root: true
-      })
+      // // 持久化数据加载颜色设置
+      // await dispatch('system/color/load', null, {
+      //   root: true
+      // })
     }
   }
 }

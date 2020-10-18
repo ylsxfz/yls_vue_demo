@@ -1,3 +1,4 @@
+import util from '@/libs/util'
 export default {
   namespaced: true,
   state: {
@@ -20,6 +21,8 @@ export default {
         value: info,
         user: true
       }, { root: true })
+      util.log.capsule('用户信息','登录时的用户信息设置','success')
+      console.log(state.info)
     },
     /**
      * @description 从数据库取用户数据
@@ -33,6 +36,8 @@ export default {
         defaultValue: {},
         user: true
       }, { root: true })
+      util.log.capsule('用户信息','登录成功用户信息获取','success')
+      console.log(state.info)
     }
   }
 }

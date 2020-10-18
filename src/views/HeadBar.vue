@@ -44,9 +44,9 @@
           <header-log />
         </el-menu-item>
         <!-- 搜索 -->
-        <el-menu-item index="1">
+        <!-- <el-menu-item index="1">
           <header-search @click="handleSearchClick"/>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-menu-item index="2" v-popover:popover-lang>
           <!-- 语言切换 -->
           <li style="color:#fff;" class="fa fa-language fa-lg"></li>
