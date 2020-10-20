@@ -1,5 +1,5 @@
 <template>
-  <el-select v-model="value" :placeholder=placeholder @change="getSelectValue">
+  <el-select v-model="selectValue" :placeholder=placeholder @change="getSelectValue">
     <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
     </el-option>
   </el-select>
@@ -12,10 +12,10 @@
         type: Array,
         required: true
       },
-      // value: {
-      //   type: String,
-      //   //required: true,
-      // },
+      
+      value: {
+        type: String,
+      },
 
       label: {
         type: String,
@@ -30,7 +30,7 @@
 
     data() {
       return {
-        value: ''
+        selectValue: ''
       }
     },
 
@@ -47,10 +47,10 @@
     watch: {
       //判断下拉框的值是否有改变
       value(val) {
-        this.value = val; //②监听外部对props属性result的变更，并同步到组件内的data属性myResult中
+        this.selectValue = val; //②监听外部对props属性result的变更，并同步到组件内的data属性myResult中
       },
 
-      svalue(val, oldVal) {
+      selectValue(val, oldVal) {
         if (val != oldVal) {
           this.$emit("input", val); //③组件内对myResult变更后向外部发送事件通知
         }

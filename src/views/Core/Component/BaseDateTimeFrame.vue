@@ -1,7 +1,7 @@
 <template>
   <div class="block">
     <span class="demonstration"></span>
-    <el-date-picker @change="changeTime" v-model="value" value-format="yyyy-MM-dd HH:mm:ss" type="datetimerange"
+    <el-date-picker @change="changeTime" v-model="selectValue" value-format="yyyy-MM-dd HH:mm:ss" type="datetimerange"
       range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期">
     </el-date-picker>
   </div>
@@ -9,6 +9,11 @@
 
 <script>
   export default {
+    props: {
+      value: {
+        type: Array,
+      },
+    },
     data() {
       return {
         pickerOptions: {
@@ -39,7 +44,7 @@
           }]
         },
         //value: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
-        value:[]
+        selectValue:[]
       };
     },
 
@@ -49,7 +54,19 @@
       changeTime:function(val){
         this.$emit("getSelectTImeFrame",val)
       }
-    }
+    },
+    watch: {
+      //判断下拉框的值是否有改变
+      value(val) {
+        this.selectValue = val; //②监听外部对props属性result的变更，并同步到组件内的data属性myResult中
+      },
+
+      selectValue(val, oldVal) {
+        if (val != oldVal) {
+          this.$emit("input", val); //③组件内对myResult变更后向外部发送事件通知
+        }
+      }
+    },
 
 
   };

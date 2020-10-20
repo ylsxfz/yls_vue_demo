@@ -1,16 +1,24 @@
 <template>
   <div class="page-container">
     <h1>测试页面</h1>
-    下拉框：<base-select v-model="filters.selectValue" :options='options' @getSelectValue="getSelectValue"></base-select>
-    <p />
-    时间范围组件：<BaseDateTimeFrame v-model="filters.selectTime" @getSelectTImeFrame="getSelectTImeFrame"></BaseDateTimeFrame>
+    <el-form :inline="true" ref="filters" :model="filters" :size="size">
+       <el-form-item prop="selectValue">
+         <base-select v-model="filters.selectValue" :options='options'></base-select>
+       </el-form-item>
+       <el-form-item prop="selectTime">
+         <BaseDateTimeFrame v-model="filters.selectTime"></BaseDateTimeFrame>
+       </el-form-item>
+       <el-form-item>
+         <kt-button icon="fa fa-plus" :label="$t('action.reset')" type="primary" @click="handleReset('filters')" />
+       </el-form-item>
+    </el-form>
   </div>
 </template>
 
 <script>
   import BaseSelect from "@/views/Core/Component/BaseSelect"
   import BaseDateTimeFrame from "@/views/Core/Component/BaseDateTimeFrame"
-
+  import KtButton from "@/views/Core/KtButton"
   //向外暴露的成员，可以使用任意变量来接收
   export default {
     /**
@@ -32,6 +40,7 @@
     components: {
       BaseSelect,
       BaseDateTimeFrame,
+      KtButton,
     },
 
     /**
@@ -39,9 +48,10 @@
      */
     data() {
       return {
+        size:'small',
         filters: {
           selectValue: '',
-          selectTime: '',
+          selectTime: [],
         },
         options: [{
           value: '选项1',
@@ -76,7 +86,12 @@
       getSelectTImeFrame: function(val) {
         this.filters.selectTime = val
         console.log("时间范围组件的值：", val)
-      }
+      },
+
+      handleReset:function(formName){
+        this.$refs[formName].resetFields()
+      },
+
     },
 
 
