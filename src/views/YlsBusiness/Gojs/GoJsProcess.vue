@@ -43,24 +43,24 @@
     methods: {
       //保持
       // Show the diagram's model in JSON format that the user may edit
-      save:function() {
+      save: function() {
         this.saveDiagramProperties(); // do this first, before writing to JSON
         document.getElementById("mySavedModel").value = this.myDiagram.model.toJson();
         this.myDiagram.isModified = false;
       },
       //保存节点属性
-      saveDiagramProperties:function() {
+      saveDiagramProperties: function() {
         this.myDiagram.model.modelData.position = go.Point.stringify(this.myDiagram.position);
       },
 
       //加载
-      load:function() {
+      load: function() {
         this.myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
         this.loadDiagramProperties(); // do this after the Model.modelData has been brought into memory
       },
 
       //加载节点属性
-      loadDiagramProperties:function(e) {
+      loadDiagramProperties: function(e) {
         // set Diagram.initialPosition, not Diagram.position, to handle initialization side-effects
         var pos = this.myDiagram.model.modelData.position;
         if (pos) this.myDiagram.initialPosition = go.Point.parse(pos);
@@ -81,6 +81,8 @@
 
         // 初始化左边的导航栏
         this.$api.gojs_templete.initMyPalette("new-chart-palette", myDiagram)
+        // 设置画板为只读模式
+        // myDiagram.isReadOnly = true
         // 赋值画布对象
         this.myDiagram = myDiagram
       },
