@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name:"/Demo/PageCache/off",
   data () {
     return {
       value: ''

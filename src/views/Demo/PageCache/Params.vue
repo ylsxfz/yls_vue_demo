@@ -30,6 +30,7 @@
  * 这里简单演示如何根据 id 管理多组数据对象
  */
 export default {
+  name:"demo-pageCache-params",
   props: {
     id: {
       type: String,

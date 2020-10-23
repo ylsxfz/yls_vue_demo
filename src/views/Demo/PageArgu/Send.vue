@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name:'demoPageArguSend',
+  name:'demo-page-argu-send',
   data () {
     return {
       sendForm: {

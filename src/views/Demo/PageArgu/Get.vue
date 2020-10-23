@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name:'demoPageArguGet',
+  name:'demo-page-argu-get',
   mounted () {
     console.log('this.$route', this.$route)
   }
