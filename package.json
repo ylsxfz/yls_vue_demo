@@ -29,7 +29,7 @@
     "js-cookie": "^2.2.1",
     "lowdb": "^1.0.0",
     "markdown-loader": "^6.0.0",
-    "marked": "^1.2.0",
+    "marked": "^2.0.0",
     "mock": "^0.1.1",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
